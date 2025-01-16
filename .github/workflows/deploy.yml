@@ -1,0 +1,31 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+    # paths:
+    #   - '.github/workflows/**'
+    #   - 'blogs/**'
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2 # git pull
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+      - name: deploy project
+        run: |
+          npm i pnpm -g
+          pnpm install
+          npm run build
+      - name: deploy github pages
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          # 要部署的文件夹，必填
+          FOLDER: .vitepress/dist
+          # 希望部署的分支，默认gh-pages，我这里改成了deploy
+          BRANCH: deploy
