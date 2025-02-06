@@ -24,3 +24,9 @@ Host github.com
 $ ssh -T git@github.com
 Hi xxxxx! You've successfully authenticated, but GitHub does not
 provide shell access.
+
+## 全局配置git用户名和邮箱
+```bash
+git config --global user.name xx
+git config --global user.email "xxx.com"
+```
