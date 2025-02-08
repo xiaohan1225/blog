@@ -1,1 +1,0 @@
-import{_ as s,c as a,o as i,ae as e}from"./chunks/framework.BsOxKfNh.js";const d=JSON.parse('{"title":"This should also timeout","description":"","frontmatter":{},"headers":[],"relativePath":"git.md","filePath":"git.md"}'),o={name:"git.md"};function n(h,t,l,r,c,p){return i(),a("div",null,t[0]||(t[0]=[e("",12)]))}const g=s(o,[["render",n]]);export{d as __pageData,g as default};
