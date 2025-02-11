@@ -1,8 +1,10 @@
 import { defineConfig } from 'vitepress'
+import nav from './nav.mts'
+import sidebar from './sidebar.mts'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "小寒的小木屋",
+  title: "小寒的博客",
   description: "喜欢JavaScript、专注于做前端、后端技术分享",
   srcDir: './src',
   srcExclude: ['**/README.md'],
@@ -10,20 +12,8 @@ export default defineConfig({
   base: '/blog/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-    nav: [
-      { text: '首页', link: '/' },
-      { text: '前端知识库', link: '/markdown-examples' }
-    ],
-
-    sidebar: [
-      {
-        text: 'vitepress篇',
-        items: [
-          { text: 'Markdown Examples', link: '/markdown-examples' },
-          { text: 'Runtime API Examples', link: '/api-examples' }
-        ]
-      }
-    ],
+    nav,
+    sidebar,
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xiaohan1225' }
