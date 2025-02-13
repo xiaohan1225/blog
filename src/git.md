@@ -4,9 +4,26 @@ git remote set-url origin git@github.com:username/repo.git
 ## 删除远程分支
 git push --delete origin branch-name
 
-## ssh: connect to host github.com port 22: Connection timed out报错
+## 配置git用户名和邮箱
 
-# This should also timeout
+全局配置：
+```bash
+git config --global user.name xx
+git config --global user.email xxx.com
+```
+本地配置：
+
+```bash
+git config --local user.name xx
+git config --local user.email xxx.com
+```
+
+## git常见问题
+### 1.github push报错
+在推送代码给`github`仓库的时候，报错：`ssh: connect to host github.com port 22: Connection timed out`；
+
+解决方案如下：
+
 $ ssh -T git@github.com
 ssh: connect to host github.com port 22: Connection timed out
 
@@ -25,8 +42,6 @@ $ ssh -T git@github.com
 Hi xxxxx! You've successfully authenticated, but GitHub does not
 provide shell access.
 
-## 全局配置git用户名和邮箱
-```bash
-git config --global user.name xx
-git config --global user.email "xxx.com"
-```
+
+### 2.`Github`中`Contribution activity`不展示`commit`相关的信息
+可能是git配置的邮箱登录`github`的邮箱不一致导致的，这时候需要使用`git config --local user.email xxx.com` 配置下。
