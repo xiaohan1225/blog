@@ -6,8 +6,8 @@ export default {
     //         { text: 'Runtime API Examples', link: '/api-examples' }
     //     ]
     // }
-    '/a/b': [
-        { text: 'Git', link: '/git' },
-        { text: 'Runtime API Examples', link: '/api-examples' }
+    '/engineer': [
+        { text: '脚手架', link: '/engineer/1.cli' },
+        { text: 'lerna', link: '/engineer/2.lerna' }
     ]
 }
