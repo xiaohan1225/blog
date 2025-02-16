@@ -1,0 +1,1 @@
+import{_ as o,c as t,o as a,ae as l}from"./chunks/framework.CDwmhxVj.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"vscode/2.md","filePath":"vscode/2.md"}'),c={name:"vscode/2.md"};function d(r,e,s,i,_,n){return a(),t("div",null,e[0]||(e[0]=[l("",4)]))}const f=o(c,[["render",d]]);export{m as __pageData,f as default};
