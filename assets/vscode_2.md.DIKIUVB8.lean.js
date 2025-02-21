@@ -1,0 +1,1 @@
+import{_ as o,c as a,o as t,ae as l}from"./chunks/framework.CDwmhxVj.js";const p=JSON.parse('{"title":"vscode快捷键","description":"","frontmatter":{},"headers":[],"relativePath":"vscode/2.md","filePath":"vscode/2.md"}'),d={name:"vscode/2.md"};function c(r,e,i,s,n,_){return t(),a("div",null,e[0]||(e[0]=[l("",6)]))}const f=o(d,[["render",c]]);export{p as __pageData,f as default};
