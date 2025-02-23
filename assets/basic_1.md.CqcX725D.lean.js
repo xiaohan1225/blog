@@ -1,0 +1,1 @@
+import{_ as i,c as a,o as n,ae as l}from"./chunks/framework.CDwmhxVj.js";const g=JSON.parse('{"title":"二进制","description":"","frontmatter":{},"headers":[],"relativePath":"basic/1.md","filePath":"basic/1.md"}'),h={name:"basic/1.md"};function p(t,s,k,e,E,r){return n(),a("div",null,s[0]||(s[0]=[l("",3)]))}const c=i(h,[["render",p]]);export{g as __pageData,c as default};
