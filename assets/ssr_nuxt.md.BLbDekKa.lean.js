@@ -1,0 +1,1 @@
+import{_ as t,c as e,o as a,ae as n}from"./chunks/framework.CDwmhxVj.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ssr/nuxt.md","filePath":"ssr/nuxt.md"}'),i={name:"ssr/nuxt.md"};function o(r,s,p,h,l,c){return a(),e("div",null,s[0]||(s[0]=[n("",11)]))}const k=t(i,[["render",o]]);export{u as __pageData,k as default};
