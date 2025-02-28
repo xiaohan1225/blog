@@ -9,7 +9,7 @@ export default defineConfig({
   srcDir: './src',
   srcExclude: ['**/README.md'],
   // outDir: '../public',
-  base: '/blog/',
+  // base: '/blog/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav,
@@ -18,5 +18,6 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/xiaohan1225' }
     ]
-  }
+  },
+  cleanUrls: false, // 是否从 URL 中删除 .html 后缀，这个功能开启需要服务端的支持，比如 Nginx，在访问/hello时，在不重定向的情况下，返回/hello.html
 })
