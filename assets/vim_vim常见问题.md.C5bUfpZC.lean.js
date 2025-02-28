@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as t,ae as e}from"./chunks/framework.CDwmhxVj.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"vim/vim常见问题.md","filePath":"vim/vim常见问题.md"}'),n={name:"vim/vim常见问题.md"};function l(r,a,o,p,c,h){return t(),i("div",null,a[0]||(a[0]=[e("",7)]))}const _=s(n,[["render",l]]);export{m as __pageData,_ as default};

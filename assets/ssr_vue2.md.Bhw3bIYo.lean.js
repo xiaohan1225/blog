@@ -1,1 +1,0 @@
-import{_ as o,c as a,o as r,ae as c}from"./chunks/framework.CDwmhxVj.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"ssr/vue2.md","filePath":"ssr/vue2.md"}'),t={name:"ssr/vue2.md"};function d(s,e,l,i,n,_){return r(),a("div",null,e[0]||(e[0]=[c("",4)]))}const u=o(t,[["render",d]]);export{h as __pageData,u as default};

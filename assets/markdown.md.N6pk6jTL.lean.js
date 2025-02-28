@@ -1,1 +1,0 @@
-import{_ as s,c as i,o as e,ae as n}from"./chunks/framework.CDwmhxVj.js";const c=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"markdown.md","filePath":"markdown.md"}'),t={name:"markdown.md"};function l(r,a,p,h,d,o){return e(),i("div",null,a[0]||(a[0]=[n("",11)]))}const E=s(t,[["render",l]]);export{c as __pageData,E as default};
