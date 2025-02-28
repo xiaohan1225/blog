@@ -7,7 +7,7 @@ export default {
     //     ]
     // }
     '/engineer': [
-        { text: '脚手架', link: '/engineer/1.cli' },
-        { text: 'lerna', link: '/engineer/2.lerna' }
+        { text: '脚手架', link: '/collect/engineer/1.cli' },
+        { text: 'lerna', link: '/collect/engineer/2.lerna' }
     ]
 }

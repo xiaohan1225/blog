@@ -9,7 +9,7 @@ hero:
   actions:
     - theme: brand
       text: 开始学习
-      link: /markdown
+      link: /collect/develop/markdown
     - theme: alt
       text: vitepress搭建博客教程
       link: /api-examples
