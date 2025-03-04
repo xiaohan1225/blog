@@ -9,7 +9,7 @@ export default defineConfig({
   srcDir: './src',
   srcExclude: ['**/README.md'],
   // outDir: '../public',
-  // base: '/blog/',
+  base: '/blog/',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav,
