@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    img {
+      width: 300px;
+      height: 300px;
+    }
+  </style>
+</head>
+<body>
+  <button id="copy">复制</button>
+  <button id="copyImage1">复制图片</button>
+  <button id="paste">粘贴</button>
+  <input value="111222" id="input" readonly/>
+  <input id="input1"/>
+
+  <hr/>
+  <img id="img" crossOrigin src="https://img2.baidu.com/it/u=3131108470,560487403&fm=253&app=120&size=w931&n=0&f=JPEG&fmt=auto?sec=1741366800&t=2bc1e50adf7e6b1ea5ca5c3199db4f08"/>
+  <script>
+    copy.addEventListener("click", () => {
+      // const obj = { a: 1, b: 2 };
+      // const blob = new Blob([JSON.stringify(obj, null, 2)], {
+      //   type: "application/json",
+      // });
+      // navigator.clipboard.write([new ClipboardItem({ "application/json": blob })]);
+      // alert("复制成功");
+      const input = document.getElementById("input");
+      input.select();
+      document.execCommand("copy");
+    })
+
+    paste.addEventListener("click", () => {
+      const input = document.getElementById("input1");
+      input.focus();
+      document.execCommand("paste");
+    })
+
+    copyImage1.addEventListener("click", () => {
+      const img = document.getElementById("img");
+      copyImage(img);
+    })
+
+
+    function copyImage(img) {
+      const canvas = document.createElement('canvas')
+      canvas.width = img.width
+      canvas.height = img.height
+      const ctx = canvas.getContext('2d')
+      ctx.drawImage(img, 0, 0, img.width, img.height)
+      canvas.toBlob((blob) => {
+        // 目前图片只支持 png 类型
+        const clipboardItem = new ClipboardItem({ 'image/jpg': blob })
+        navigator.clipboard.write([clipboardItem])
+        console.log('复制成功');
+      })
+    }
+
+    
+
+  </script>
+</body>
+</html>
