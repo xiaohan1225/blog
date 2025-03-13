@@ -29,3 +29,9 @@ export default {
 ```
 
 这里的`{4}`表示高亮第4行。
+
+## 显示红色字体
+
+<font color='red'> text </font>
+
+$\color{red}{红色字}$ 或者 $\color{FF0000}{红色字}$
