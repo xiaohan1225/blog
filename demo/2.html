@@ -4,9 +4,61 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <style>
+    .text {
+      color: transparent;
+      text-shadow: #222 0 0 5px;
+      user-select: none;
+    }
+    .box {
+      width: 300px;
+      height: 300px;
+      margin: 100px auto;
+      box-shadow: 0 0 0 6px rgba(0, 0, 0, .2), 0 0 0 12px rgba(0, 0, 0, .2), 0 0 0 18px rgba(0, 0, 0, .2);
+    }
+  </style>
 </head>
 <body>
-  <div id="a">a</div>
+  <!-- <div id="a">a</div>
   <div id="a">b</div>
+  <span>hello</span><span class="text">world</span>
+  <div hidden>hello world1</div>
+  <div>hello world</div> -->
+  <div class="box"></div>
+
+  <input list="fruits" name="fruit" />
+  <datalist id="fruits">
+    <option value="苹果"></option>
+    <option value="橘子"></option>
+    <option value="香蕉"></option>
+  </datalist>
+  <script>
+    const downlink = navigator.connection.downlink;
+    console.log('带宽为', downlink + ' Mbps');
+
+    // document.addEventListener('keydown', (e) => {
+    //   if (e.keyCode === 123) {
+    //     e.preventDefault();
+    //   }
+    // })
+
+    // document.addEventListener('contextmenu', (e) => {
+    //   e.preventDefault();
+    // })
+    const a = Infinity;
+    console.log(a === a - 1);
+    document.addEventListener('selectstart', (e) => {
+      e.preventDefault();
+    })
+  </script>
+
+<style>
+  .vertical-text {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+  }
+</style>
+
+<div class="vertical-text">文字纵向排列</div>
 </body>
 </html>
