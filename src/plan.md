@@ -20,6 +20,7 @@
 - 实战篇：从webpack迁移到vite
 
 3. 效率篇
+- 脚手架 输入命令和行号 自动插入组件/js代码（比vscode snippets更加强大）
 - vim
 - 代码定位工具
 
