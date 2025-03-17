@@ -137,6 +137,11 @@ console.log(a === a - 1);
 ## Emmet神器
 Emmet官方文档：[https://docs.emmet.io/cheat-sheet/https://docs.emmet.io/cheat-sheet/](https://docs.emmet.io/cheat-sheet/)
 
+lorem乱数假文,用于测试和填充页面内容
+```js
+li*5>lorem
+``
+
 ## 数字的包装类
 ```js
 console.log(1.toString()); // 报错
