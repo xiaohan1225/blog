@@ -19,8 +19,8 @@ bug产生：先进入课时播放页，然后判断用户没买这个们课程�
 
 报错信息：
 
-- <font color='red'>[Vue warn]: Error in nextTick: "NotFoundError: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node."
--  DOMException: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.</font>
+- <font color='red'>[Vue warn]: Error in nextTick: "NotFoundError: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node."</font>
+- <font color='red'>DOMException: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.</font>
 
 报错条件：
 1. 一个元素下面是一个弹窗，而弹窗被挂载到body下面，两个元素都用v-if控制
