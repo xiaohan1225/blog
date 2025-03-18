@@ -181,8 +181,6 @@ document.addEventListener('selectstart', (e) => {
   e.preventDefault();
 })
 ```
-</style>
-```
 
 ## 利用逗号，在一行中执行多个表达式
 ```js
@@ -196,17 +194,17 @@ let b = 2;
 
 ```css
 .box {
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
 }
 ```
 可以简写成：
 ```css
 .box {
-    position: absolute;
-    inset: 0;
+  position: absolute;
+  inset: 0;
 }
 ```
