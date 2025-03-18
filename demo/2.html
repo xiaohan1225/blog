@@ -37,6 +37,12 @@
     <option value="橘子"></option>
     <option value="香蕉"></option>
   </datalist>
+
+  <div id="box">
+    parent
+   
+  </div>
+  <div id="child">child</div>
   <script>
     const downlink = navigator.connection.downlink;
     console.log('带宽为', downlink + ' Mbps');
@@ -55,7 +61,12 @@
     document.addEventListener('selectstart', (e) => {
       e.preventDefault();
     })
+
+    const div = document.createElement('div');
+    div.innerHTML = 'yeyeye'
+    box.insertBefore(div, child);
   </script>
+
 
 <style>
   .vertical-text {
