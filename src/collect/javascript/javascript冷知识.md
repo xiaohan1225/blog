@@ -2,6 +2,8 @@
 
 在地址栏中输入`javascript:alert('hello world')`，然后按回车键，会弹出一个提示框显示`hello world`。
 
+还可以使用`location.href`和`window.open`来执行它。
+
 > 注意：如果直接把这段代码复制到地址栏，浏览器会删除掉前面`javascript:`（比如谷歌浏览器、edge浏览器），需要自己手动加上。
 
 ## 浏览器地址栏可以运行html
