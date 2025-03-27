@@ -1,3 +1,15 @@
+## 如何生成 ssh 密钥
+```bash
+ssh-keygen -t rsa -C "email@xxx.com"
+cd ~/.ssh
+cat id_rsa.pub
+```
+
+## 下载 git
+1. 访问git下载链接：[https://git-scm.com/downloads](https://git-scm.com/downloads)
+2. 点击`macOS`
+3. 找到`Binary installer`，点击`installer`进行下载安装即可
+
 ## 常用git命令
 
 ### git remote
