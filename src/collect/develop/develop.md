@@ -37,3 +37,22 @@ export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || pr
 ```bash
 source ~/.zshrc
 ```
+
+## Mac nvm install failed python: not found
+在M2芯片的设备上，由于缺少python导致`nvm`安装`node`失败。
+
+`nvm install v12.22.12`报错： `exec: python: not found`
+
+```bash
+cd /System/Applications/Utilities/
+open .
+```
+找到 终端.app，右键 -> 显示简介，钩上 Rosetta，然后**退出终端.app，完全退出，再重新打开终端**
+
+增加`alias python=/usr/bin/python3`到`~/.zshrc`和`~/.bash_profile`中：
+```bash
+echo "alias python=/usr/bin/python3" >> ~/.zshrc
+source ~/.zshrc
+echo "alias python=/usr/bin/python3" >> ~/.bash_profile
+source ~/.bash_profile
+```
