@@ -56,3 +56,11 @@ source ~/.zshrc
 echo "alias python=/usr/bin/python3" >> ~/.bash_profile
 source ~/.bash_profile
 ```
+
+## 清理工具
+
+腾讯柠檬清理：https://lemon.qq.com/
+
+## 数据库管理
+
+[Sequel Ace](https://sequel-ace.com/)
