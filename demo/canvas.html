@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <canvas id="canvas"></canvas>
+  <script>
+    // 1. 获取canvas元素
+    const canvas = document.querySelector('#canvas');
+    // 2. 获取canvas上下文
+    const ctx = canvas.getContext('2d');
+    canvas.width = screen.availWidth;
+    canvas.height = screen.availHeight;
+
+    let str = 'hello world0132320032982'.split('');
+    let arr = Array(Math.ceil(canvas.width / 10)).fill(0);
+
+    const rain = () => {
+      ctx.fillStyle = 'rgba(0, 0, 0, 0.05)';
+      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      console.log('canvas.width, canvas.height: ', canvas.width, canvas.height);
+      // ctx.fillStyle = '#0f0';
+      // arr.forEach((item, index) => {
+      //   ctx.fillText(str[Math.floor(Math.random() * str.length)], index * 10, item + 10);
+      //   arr[index] = item >= canvas.height || item > 10000 * Math.random() ? 0 : item + 10;
+      // })
+    }
+
+    // setInterval(rain, 40);
+    // rain()
+  </script>
+</body>
+</html>
