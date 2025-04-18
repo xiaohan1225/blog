@@ -64,3 +64,12 @@ source ~/.bash_profile
 ## 数据库管理
 
 [Sequel Ace](https://sequel-ace.com/)
+
+## code . 命令报错：zsh: command not found: code
+1. 尝试安装 code 命令
+- 打开 Visual Studio Code。
+- 按 Command + Shift + P 打开命令面板。
+- 输入 Shell Command: Install 'code' command in PATH 并选择它。
+- 重新启动终端。
+
+如果安装报错`EACCES: permission denied, unlink '/usr/local/bin/code'`，需要先选择 `Shell Command: Uninstall 'code' command from PATH` 卸载code命令，然后重新安装。

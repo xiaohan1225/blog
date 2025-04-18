@@ -3,14 +3,15 @@ export default [
     {
       text: 'JavaScript篇',
       items: [
-        { text: 'JavaScript基础篇', link: '/item-1' },
+        { text: 'JavaScript基础篇', link: '/collect/javascript/js-base/001' },
         { text: 'JavaScript进阶篇', link: '/item-2' },
-      ]
+      ],
+       activeMatch: '/collect/javascript/'
     },
     {
       text: 'TypeScript篇',
       items: [
-        { text: 'TypeScript基础篇', link: '/item-1' },
+        { text: 'TypeScript基础篇', link: '/collect/typescript/1.ts介绍' },
         { text: 'TypeScript进阶篇', link: '/item-2' },
       ]
     },
@@ -27,5 +28,9 @@ export default [
         { text: '浏览器原理篇', link: '/collect/browser/002' },
         { text: 'chrome插件篇', link: '/collect/engineer/1.cli' },
       ]
+    },
+    { 
+      text: '前端面试篇', 
+      link: '/collect/interview/复习/1.网络'
     },
 ]
