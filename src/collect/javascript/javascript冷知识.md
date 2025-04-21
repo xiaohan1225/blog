@@ -1,27 +1,34 @@
-## 浏览器地址栏可以执行javascript代码
+## 一、浏览器地址栏的妙用
+
+### 1.1 可以执行javascript代码
 
 在地址栏中输入`javascript:alert('hello world')`，然后按回车键，会弹出一个提示框显示`hello world`。
 
-还可以使用`location.href`和`window.open`来执行它。
-
 > 注意：如果直接把这段代码复制到地址栏，浏览器会删除掉前面`javascript:`（比如谷歌浏览器、edge浏览器），需要自己手动加上。
 
-## 浏览器地址栏可以运行html
+还可以使用`location.href`和`window.open`来执行它。
+
+```js
+location.href = "javascript:alert('hello world')"
+```
+
+
+### 1.2 可以运行html
 
 在地址栏中输入`data:text/html,<div>hello world</div>`，然后按回车键，会显示一个包含`hello world`的div元素。
 
 利用这个能力，我们可以把浏览器标签页变成一个编辑器。
 
-`contenteditable`属性能把一个元素变成可编辑的，所以我们如果在地址栏中输入`data:text/html,<html contenteditable>`，就可以把页面直接变成一个编辑器了。
+`contenteditable`属性能把一个元素变成可编辑的，所以我们如果在地址栏中输入`data:text/html,<html contenteditable>`，就可以把页面直接变成一个编辑器了。你还可以把它收藏到书签，以后直接点击就可以打开一个编辑器了。
 
-## 把整个网页变成可编辑
+## 二、把整个在线网页变成可编辑
 
 只需要在浏览器控制台中输入这样一行代码，就能把整个页面变成可编辑的。
 ```js
 document.body.contentEditable = 'true';
 ```
 
-## 利用a标签解析URL
+## 三、利用a标签解析URL
 
 ```js
 const a = document.createElement('a');
@@ -32,7 +39,7 @@ console.log(a.search); //  ?a=1&b=1
 console.log(a.hash); // #hash
 ```
 
-## HTML的ID和全局变量的映射关系
+## 四、HTML的ID和全局变量的映射关系
 
 在HTML中，如果有一个元素的id是`a`，那么在全局作用域中，会有一个变量`a`，这个变量指向这个元素。
 
@@ -53,17 +60,17 @@ console.log(a.hash); // #hash
 </script>
 ```
 
-## cdn加载省略协议头
+## 五、cdn加载省略协议头
 ```html
 <script src="//cdn.xxx.com/xxx.js"></script>
 ```
 src的值以//开头，省略了协议，则在加载js时，使用当前页面在协议。
 
-如果当前页面是`https`则以`https`进行加载
-如果当前页面是`http`则以`http`进行加载
-如果当前页面是`ftp`则以`ftp`进行加载
+如果当前页面是`https`则以`https`进行加载。
+如果当前页面是`http`则以`http`进行加载。
+如果当前页面是`ftp`则以`ftp`进行加载。
 
-## 小恶作剧：隐藏鼠标光标
+## 六、前端的恶作剧：隐藏鼠标光标
 ```html
 <style>
   * {
@@ -72,7 +79,9 @@ src的值以//开头，省略了协议，则在加载js时，使用当前页面�
 </style>
 ```
 
-## 文字模糊效果
+## 七、文字模糊效果
+前端文本的马赛克效果，可以使用`text-shadow`实现。
+
 ```html
 <style>
   .text {
@@ -85,7 +94,7 @@ src的值以//开头，省略了协议，则在加载js时，使用当前页面�
 <span>hello</span><span class="text">world</span>
 ```
 
-## 不借助js和css，让元素消失
+## 八、不借助js和css，让元素消失
 ```html
 <div hidden>hello world</div>
 ```
@@ -96,7 +105,7 @@ const downlink = navigator.connection.downlink;
 console.log('带宽为', downlink + ' Mbps');
 ```
 
-## 保护隐私
+## 九、保护隐私
 禁用`F12`快捷键：
 ```js
 document.addEventListener('keydown', (e) => {
@@ -106,6 +115,7 @@ document.addEventListener('keydown', (e) => {
 })
 ```
 
+
 禁用右键菜单：
 ```js
 document.addEventListener('contextmenu', (e) => {
@@ -113,7 +123,15 @@ document.addEventListener('contextmenu', (e) => {
 })
 ```
 
-## css实现三角形
+但即使通过禁用`F12`快捷键和右键菜单，用户依然可以通过其它方式打开控制台。
+1. 通过浏览器菜单选项直接打开控制台：比如 `chrome`浏览器通过 `菜单 > 更多工具 > 开发者工具` 路径可以打开控制台，`Firefox/Edge/Safari` 等浏览器都有类似选项。
+虽然通过 js 可以禁用快捷键，但用户通过浏览器设置修改快捷键。
+2. 用户还可以通过其它快捷键打开控制台：
+- Cmd+Opt+I (Mac)
+- Ctrl+Shift+C (打开检查元素模式)
+
+
+## 十、css实现三角形
 ```html
 <style>
   .triangle {
