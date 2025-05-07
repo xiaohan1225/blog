@@ -4,12 +4,13 @@
 
 在地址栏中输入`javascript:alert('hello world')`，然后按回车键，会弹出一个提示框显示`hello world`。
 
-> 注意：如果直接把这段代码复制到地址栏，浏览器会删除掉前面`javascript:`（比如谷歌浏览器、edge浏览器），需要自己手动加上。
+> 注意：如果直接把这段代码复制到地址栏，浏览器会删除掉前面`javascript:`（比如谷歌浏览器、edge浏览器等），需要自己手动加上。
 
 还可以使用`location.href`和`window.open`来执行它。
 
 ```js
-location.href = "javascript:alert('hello world')"
+location.href = "javascript:alert('hello world')";
+window.open("javascript:alert('hello world')");
 ```
 
 
@@ -27,6 +28,8 @@ location.href = "javascript:alert('hello world')"
 ```js
 document.body.contentEditable = 'true';
 ```
+
+这样我们就能随便修改页面了，比如修改页面中的文字、图片等等，轻松实现修改账户余额去装逼！
 
 ## 三、利用a标签解析URL
 
