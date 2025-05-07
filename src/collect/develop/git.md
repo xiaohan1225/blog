@@ -86,6 +86,36 @@ $ ssh -T git@github.com
 Hi xxxxx! You've successfully authenticated, but GitHub does not
 provide shell access.
 
+如果用了上述方式还是报错，则继续往下尝试：
+
+先使用 `ssh -vT git@github.com` 看看情况，得到如下结果：
+```bash
+OpenSSH_9.6p1, OpenSSL 3.2.1 30 Jan 2024
+debug1: Reading configuration data /c/Users/15940/.ssh/config
+debug1: /c/Users/15940/.ssh/config line 1: Applying options for github.com
+debug1: Reading configuration data /etc/ssh/ssh_config
+debug1: Connecting to ssh.github.com [::1] port 443.
+debug1: connect to address ::1 port 443: Connection refused
+debug1: Connecting to ssh.github.com [127.0.0.1] port 443.
+debug1: connect to address 127.0.0.1 port 443: Connection refused
+ssh: connect to host ssh.github.com port 443: Connection refused
+```
+原因是系统把 http://ssh.github.com 解析成了 127.0.0.1/::1（本地回环地址），而不是 GitHub 服务器的真实 IP
+
+以管理员身份打开 `PowerShell`，使用 `notepad C:\Windows\System32\drivers\etc\hosts` 命令修改 `hosts` 文件：
+```bash
+20.205.243.166    github.com
+20.205.243.168    api.github.com
+```
+
+再将.ssh\config改为:
+```bash
+Host github.com
+  HostName github.com
+  Port 22
+```
+
+然后就可以了。
 
 ### 2.`Github`中`Contribution activity`不展示`commit`相关的信息
 可能是git配置的邮箱登录`github`的邮箱不一致导致的，这时候需要使用`git config --local user.email xxx.com` 配置下。
