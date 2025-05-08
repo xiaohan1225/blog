@@ -67,7 +67,7 @@ console.log(a.hash); // #hash
 ```html
 <script src="//cdn.xxx.com/xxx.js"></script>
 ```
-src的值以//开头，省略了协议，则在加载js时，使用当前页面在协议。
+src的值以//开头，省略了协议，则在加载js时，会使用当前页面的协议进行加载。
 
 如果当前页面是`https`则以`https`进行加载。
 如果当前页面是`http`则以`http`进行加载。
@@ -81,6 +81,7 @@ src的值以//开头，省略了协议，则在加载js时，使用当前页面�
   }
 </style>
 ```
+直接通过css把光标隐藏，让人哭笑不得。
 
 ## 七、文字模糊效果
 前端文本的马赛克效果，可以使用`text-shadow`实现。
@@ -96,8 +97,12 @@ src的值以//开头，省略了协议，则在加载js时，使用当前页面�
 
 <span>hello</span><span class="text">world</span>
 ```
+效果如下：
+
+![图片加载失败](../../assets/images/vague-text.png)
 
 ## 八、不借助js和css，让元素消失
+直接用DOM自带的`hidden`属性即可。
 ```html
 <div hidden>hello world</div>
 ```
@@ -148,7 +153,7 @@ document.addEventListener('contextmenu', (e) => {
 <div class="triangle"></div>
 ```
 
-## 为啥 a === a-1 结果为true
+## 十一、为啥 a === a-1 结果为true
 当`a`为`Infinity`无穷大时，`a - 1`的结果也是`Infinity`，所以`a === a - 1`的结果为`true`。
 
 同理，`a`的值为`-Infinity`时，此等式也成立。
@@ -157,26 +162,20 @@ const a = Infinity;
 console.log(a === a - 1);
 ```
 
-## Emmet神器
-Emmet官方文档：[https://docs.emmet.io/cheat-sheet/https://docs.emmet.io/cheat-sheet/](https://docs.emmet.io/cheat-sheet/)
-
-lorem乱数假文,用于测试和填充页面内容
-```js
-li*5>lorem
-```
-
-## 数字的包装类
+## 十二、数字的包装类
 ```js
 console.log(1.toString()); // 报错
 console.log(1..toString()); // 正常运行 输出字符串'1'
 ```
 
-## 防止网站以 iframe 方式被加载
+## 十三、防止网站以 iframe 方式被加载
 ```js
 if (window.location !== window.parent.location) window.parent.location = window.location;
 ```
 
-## datalist的使用
+## 十四、datalist的使用
+`datalist` 是 `HTML5` 中引入的一个新元素，它用于为`<input>`元素提供预定义的选项列表。就是当用户在下拉框输入内容时，浏览器会显示一个下拉列表，列表的内容就是与当前输入内容相匹配的 `datalist` 选项。
+
 ```html
 <input list="fruits" name="fruit" />
 <datalist id="fruits">
@@ -186,7 +185,10 @@ if (window.location !== window.parent.location) window.parent.location = window.
 </datalist>
 ```
 
-## 文字纵向排列
+效果如下：
+![图片加载失败](../../assets/images/datalist.png)
+
+## 十五、文字纵向排列
 ```html
 <style>
   .vertical-text {
@@ -197,23 +199,27 @@ if (window.location !== window.parent.location) window.parent.location = window.
 
 <div class="vertical-text">文字纵向排列</div>
 ```
+效果如下：
+![图片加载失败](../../assets/images/vertical-text.png)
 
-## 禁止选中文字
+## 十六、禁止选中文字
 ```js
 document.addEventListener('selectstart', (e) => {
   e.preventDefault();
 })
 ```
 
-## 利用逗号，在一行中执行多个表达式
+效果跟使用 css 的 `user-select: none` 效果类似。
+
+## 十七、利用逗号，在一行中执行多个表达式
 ```js
 let a = 1;
 let b = 2;
 (a += 2), (b += 3);
 ```
 
-## inset
-`inset`是一个简写属性，用于同时设置元素的 top、right、bottom 和 left 属性
+## 十八、inset
+`inset`是一个简写属性，用于同时设置元素的 `top`、`right`、`bottom` 和 `left` 属性
 
 ```css
 .box {
@@ -230,4 +236,12 @@ let b = 2;
   position: absolute;
   inset: 0;
 }
+```
+
+## Emmet神器
+Emmet官方文档：[https://docs.emmet.io/cheat-sheet/https://docs.emmet.io/cheat-sheet/](https://docs.emmet.io/cheat-sheet/)
+
+lorem乱数假文,用于测试和填充页面内容
+```js
+li*5>lorem
 ```
