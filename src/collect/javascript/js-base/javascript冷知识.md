@@ -99,7 +99,7 @@ src的值以//开头，省略了协议，则在加载js时，会使用当前页�
 ```
 效果如下：
 
-![图片加载失败](../../assets/images/vague-text.png)
+![图片加载失败](../../../assets/images/vague-text.png)
 
 ## 八、不借助js和css，让元素消失
 直接用DOM自带的`hidden`属性即可。
@@ -186,7 +186,7 @@ if (window.location !== window.parent.location) window.parent.location = window.
 ```
 
 效果如下：
-![图片加载失败](../../assets/images/datalist.png)
+![图片加载失败](../../../assets/images/datalist.png)
 
 ## 十五、文字纵向排列
 ```html
@@ -200,7 +200,7 @@ if (window.location !== window.parent.location) window.parent.location = window.
 <div class="vertical-text">文字纵向排列</div>
 ```
 效果如下：
-![图片加载失败](../../assets/images/vertical-text.png)
+![图片加载失败](../../../assets/images/vertical-text.png)
 
 ## 十六、禁止选中文字
 ```js
@@ -238,7 +238,7 @@ let b = 2;
 }
 ```
 
-## Emmet神器
+## 十九、Emmet神器
 Emmet官方文档：[https://docs.emmet.io/cheat-sheet/https://docs.emmet.io/cheat-sheet/](https://docs.emmet.io/cheat-sheet/)
 
 lorem乱数假文,用于测试和填充页面内容
