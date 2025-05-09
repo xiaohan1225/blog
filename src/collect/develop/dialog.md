@@ -148,3 +148,91 @@ export const dialogDrag = {
   }
 }
 ```
+
+## 前言
+
+本文主要研究，如何实现一个简单的右键菜单拖拽功能。
+
+## 实现自定义右键菜单
+html和css部分：
+```html
+<style>
+#customContextMenu {
+  display: none;
+  position: absolute;
+  background: white;
+  border: 1px solid #ccc;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+#customContextMenu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+#customContextMenu li {
+  padding: 8px 15px;
+  cursor: pointer;
+}
+#customContextMenu li:hover {
+  background: #f0f0f0;
+}
+</style>
+<div id="customContextMenu">
+  <ul>
+    <li onclick="alert('选项1被点击')">选项1</li>
+    <li onclick="alert('选项2被点击')">选项2</li>
+    <li onclick="alert('选项3被点击')">选项3</li>
+  </ul>
+</div>
+```
+js部分：
+```js
+document.addEventListener('contextmenu', function (e) {
+  e.preventDefault()
+  const menu = document.getElementById('customContextMenu')
+  menu.style.display = 'block'
+  menu.style.left = e.pageX + 'px'
+  menu.style.top = e.pageY + 'px'
+})
+
+document.addEventListener('click', function () {
+  document.getElementById('customContextMenu').style.display = 'none'
+})
+```
+
+## 1. 实现基础版拖拽功能
+
+```js
+const canMove = () => {
+  const dragDom = document.querySelector('#customContextMenu')
+  dragDom.style.cursor = 'move'
+  let clientWidth = document.documentElement.clientWidth,
+    clientHeight = document.documentElement.clientHeight
+  dragDom.onmousedown = (e) => {
+    const { left, top, right, bottom } = dragDom.getBoundingClientRect()
+    const disX = e.clientX - dragDom.offsetLeft
+    const disY = e.clientY - dragDom.offsetTop
+
+    document.onmousemove = function (e) {
+      // 通过事件委托，计算移动的距离
+      let l = e.clientX - disX
+      console.log('l : ', l)
+      let t = e.clientY - disY
+      console.log('t : ', t)
+
+      dragDom.style.left = `${l}px`
+      dragDom.style.top = `${t}px`
+    }
+
+    document.onmouseup = function (e) {
+      document.onmousemove = null
+      document.onmouseup = null
+    }
+  }
+}
+```
+
+## 2. 加上边界限制
+
+## 3. 窗口改变resize事件的处理
