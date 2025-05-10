@@ -149,6 +149,8 @@ export const dialogDrag = {
 }
 ```
 
+## 窗口改变resize事件的处理
+
 ## 前言
 
 本文主要研究，如何实现一个简单的右键菜单拖拽功能。
@@ -235,4 +237,30 @@ const canMove = () => {
 
 ## 2. 加上边界限制
 
-## 3. 窗口改变resize事件的处理
+```js
+document.addEventListener('contextmenu', async function (e) {
+  console.log('e: ', e)
+  e.preventDefault()
+  const menu = document.getElementById('customContextMenu')
+
+  menu.style.display = 'block'
+  menu.style.left = e.clientX + 'px'
+  menu.style.top = e.clientY + 'px'
+  await nextTick()
+
+  const { width, height } = menu.getBoundingClientRect()
+  console.log('width: ', width)
+  if (e.clientY + height > document.documentElement.clientHeight) {
+    console.log('纵向超出了')
+    menu.style.top = document.documentElement.clientHeight - height + 'px'
+  }
+  if (e.clientX + width > document.documentElement.clientWidth) {
+    console.log('横向超出了')
+    menu.style.left = document.documentElement.clientWidth - width + 'px'
+  }
+})
+```
+
+## 3. 指定范围内的右键菜单
+
+一般是在某些区域内进行自定义的右键菜单，比如画板、表格等区域。一般是在内部管理系统进行使用，
