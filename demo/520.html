@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>520爱心告白</title>
+    <meta
+      name="description"
+      content="一个浪漫的520页面，包含动态爱心雨效果和诗意告白"
+    />
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: #ffe6f2;
+        overflow: hidden;
+        position: relative;
+        font-family: "Noto Sans SC", "Source Han Sans", sans-serif;
+      }
+
+      /* 主内容容器样式
+   居中定位 + 文字居中 */
+      .container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        color: #ff3366;
+      }
+
+      .heart {
+        font-size: 100px;
+        animation: pulse 1.2s infinite;
+        text-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+      }
+
+      .message {
+        font-size: 2em;
+        margin: 20px 0;
+        line-height: 1.6;
+      }
+
+      .hearts {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+      }
+
+      /* 心跳动画
+   缩放比例 1 -> 1.1 -> 1 */
+      @keyframes pulse {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(1.1);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      .heart-fall {
+        position: absolute;
+        animation: fall linear forwards;
+        opacity: 0.7;
+      }
+
+      /* 爱心下落动画
+   带360度旋转效果 */
+      @keyframes fall {
+        to {
+          transform: translateY(100vh) rotate(360deg);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hearts"></div>
+    <div class="container">
+      <div class="heart">❤️</div>
+      <div class="message">
+        <p>在数不尽的星辰中</p>
+        <p>你是我唯一追寻的光</p>
+        <p>520 • 爱你每一天</p>
+      </div>
+    </div>
+
+    <footer
+      style="
+        position: absolute;
+        bottom: 20px;
+        width: 100%;
+        text-align: center;
+        color: #ff6680;
+        font-size: 14px;
+      "
+    >
+      Powered by 小寒
+      <div>xiaohanhan.cn</div>
+    </footer>
+    <script>
+      // 创建单个爱心元素
+      // 参数说明：
+      // x - 爱心初始横坐标
+      // y - 爱心初始纵坐标
+      function createHeart(x, y) {
+        const heart = document.createElement("div");
+        heart.innerHTML = "❤️";
+        heart.className = "heart-fall";
+        heart.style.left = x + "px";
+        heart.style.top = y + "px";
+        heart.style.fontSize = Math.random() * 30 + 20 + "px";
+        heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+        document.querySelector(".hearts").appendChild(heart);
+
+        setTimeout(() => heart.remove(), 5000);
+      }
+
+      // 点击事件监听：在点击位置生成爱心
+      document.addEventListener("click", (e) => {
+        createHeart(e.clientX, e.clientY);
+      });
+
+      // 自动生成爱心雨
+      // 自动爱心雨定时器（每300ms生成一个）
+      setInterval(() => {
+        const x = Math.random() * window.innerWidth;
+        const y = -50;
+        createHeart(x, y);
+      }, 300);
+    </script>
+  </body>
+</html>

@@ -35,3 +35,12 @@ export default {
 <font color='red'> text </font>
 
 $\color{red}{红色字}$ 或者 $\color{FF0000}{红色字}$
+
+
+## 插入图片
+
+语法：![替代文本](图片URL "可选标题")
+
+githubstars: 
+
+![xiaohan1225's GitHub stats](https://github-readme-stats.vercel.app/api?username=xiaohan1225&show_icons=true&count_private=true&hide_border=true&include_all_commits=true&layout=compact)

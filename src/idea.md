@@ -85,3 +85,7 @@
 
 ## 关于我的个人网站
 - 开发一个 timeline
+
+## 将来会考虑的域名
+- xiaohanclass.com
+- xuexibiancheng.com
