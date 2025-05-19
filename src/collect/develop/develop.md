@@ -4,7 +4,8 @@
 3. 点击`Sign in`
 4. 选择 `Sign in with GitHub`
 
-## 安装 nvm
+## 安装 
+
 ```bash
 sudo curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
 ```
@@ -73,3 +74,8 @@ source ~/.bash_profile
 - 重新启动终端。
 
 如果安装报错`EACCES: permission denied, unlink '/usr/local/bin/code'`，需要先选择 `Shell Command: Uninstall 'code' command from PATH` 卸载code命令，然后重新安装。
+
+
+## windows 安装 nvm
+
+[nvm](https://github.com/coreybutler/nvm-windows/releases)
