@@ -16,3 +16,11 @@ npm login --registry https://registry.npmmirror.com
 ```bash
 npm login --username <username> --password <password> --email <email>
 ```
+
+## 查看包信息
+`npm view <package-name> versions`: 查看包的所有版本
+`npm view <package-name>`: 查看完整包信息
+`npm view <package-name> version`: 查看包的最新版本
+`npm view <package-name> repository.url`: 查看包的仓库地址
+`npm view <package-name> dependencies`: 查看包的生产依赖
+`npm view <package-name> devDependencies`: 查看包的开发依赖

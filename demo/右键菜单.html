@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #customContextMenu {
+      display: none;
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+    }
+    #customContextMenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    #customContextMenu li {
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+    #customContextMenu li:hover {
+      background: #f0f0f0;
+    }
+    </style>
+</head>
+<body>
+    <div id="customContextMenu">
+      <ul>
+        <li onclick="alert('选项1被点击')">选项1</li>
+        <li onclick="alert('选项2被点击')">选项2</li>
+        <li onclick="alert('选项3被点击')">选项3</li>
+      </ul>
+    </div>
+    <script>
+      document.addEventListener('contextmenu', function (e) {
+        e.preventDefault()
+        const menu = document.getElementById('customContextMenu')
+        menu.style.display = 'block'
+        menu.style.left = e.clientX + 'px'
+        menu.style.top = e.clientX + 'px'
+      })
+
+      document.addEventListener('click', function () {
+        document.getElementById('customContextMenu').style.display = 'none'
+      })
+    </script>
+</body>
+</html>
