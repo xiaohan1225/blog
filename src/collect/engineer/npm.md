@@ -24,3 +24,13 @@ npm login --username <username> --password <password> --email <email>
 `npm view <package-name> repository.url`: 查看包的仓库地址
 `npm view <package-name> dependencies`: 查看包的生产依赖
 `npm view <package-name> devDependencies`: 查看包的开发依赖
+
+##  nrm 切换镜像源
+
+## npm 配置
+- npm config list
+- npm config list --ls
+
+
+## 常用命令
+- npm ls -g : 查看全局安装的包
