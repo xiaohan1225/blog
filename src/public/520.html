@@ -37,6 +37,16 @@
         font-size: 100px;
         animation: pulse 1.2s infinite;
         text-shadow: 0 0 20px rgba(255, 51, 102, 0.5);
+        position: relative;
+      }
+      .name {
+        font-size: 32px;
+        color:#ff3366;
+        /* position: absolute;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
+        color:#ff6680; */
       }
 
       .message {
@@ -80,14 +90,28 @@
           opacity: 0;
         }
       }
+
+      /* 小屏幕手机（纵向） */
+      @media only screen and (max-width: 760px) {
+        .message {
+          font-size: 20px;
+          /* 其他针对小屏幕手机的样式调整 */
+        }
+        .name {
+          font-size: 20px;
+        }
+      }
     </style>
   </head>
   <body>
     <div class="hearts"></div>
     <div class="container">
-      <div class="heart">❤️</div>
+      <div class="heart">
+        ❤️
+        <div class="name">明宝宝</div>
+      </div>
       <div class="message">
-        <p>陈未明，在数不尽的星辰中</p>
+        <p>在数不尽的星辰中</p>
         <p>你是我唯一追寻的光</p>
         <p>520 • 爱你每一天</p>
       </div>
@@ -103,8 +127,8 @@
         font-size: 14px;
       "
     >
-      Powered by 小寒
-      <div>xiaohanhan.cn</div>
+      Powered by 小寒寒
+      <!-- <div>xiaohanhan.cn</div> -->
     </footer>
     <script>
       // 创建单个爱心元素
