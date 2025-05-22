@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <my-component>Hello Web Components!</my-component>
+  <script>
+    class MyComponent extends HTMLElement {
+      constructor() {
+        super();
+        // 创建Shadow DOM
+        const shadow = this.attachShadow({mode: 'open'});
+        // 创建模板
+        const template = document.createElement('template');
+        template.innerHTML = `
+          <style>
+            p { color: blue; }
+          </style>
+          <p><slot></slot></p>
+        `;
+         // 将模板内容克隆到Shadow DOM
+        shadow.appendChild(template.content.cloneNode(true));
+      }
+    }
+    // 注册自定义元素
+    customElements.define('my-component', MyComponent);
+  </script>
+</body>
+</html>

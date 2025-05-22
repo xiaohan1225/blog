@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    #customContextMenu {
+      display: none;
+      position: absolute;
+      background: white;
+      border: 1px solid #ccc;
+      box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+      z-index: 100;
+    }
+    #customContextMenu ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    #customContextMenu li {
+      padding: 8px 15px;
+      cursor: pointer;
+    }
+    #customContextMenu li:hover {
+      background: var(--li-bg);
+    }
+  </style>
+  <script type="text/html">
+    <ul>
+      <li onclick="alert('选项1被点击')">选项1</li>
+      <li onclick="alert('选项2被点击')">选项2</li>
+      <li onclick="alert('选项3被点击')">选项3</li>
+    </ul>
+  </script>
+</head>
+<body>
+    <custom-menu></custom-menu>
+    <script>
+      class CustomMenu extends HTMLElement {
+        constructor() {
+          super()
+          this.attachShadow({ mode: 'open' });
+          this.createCSS();
+          this.createHTML();
+          document.addEventListener('contextmenu', e => {
+            e.preventDefault()
+            this.container.style.display = 'block';
+            this.container.style.left = `${e.pageX}px`;
+            this.container.style.top = `${e.pageY}px`;
+          })
+
+          document.addEventListener('click', e => {
+            this.container.style.display = 'none';
+          })
+        }
+        createHTML() {
+          const script = document.querySelector('script[type="text/html"]');
+          const container = document.createElement('div');
+          container.setAttribute('id', 'customContextMenu');
+          container.innerHTML = script.innerHTML;
+          this.container = container;
+          this.shadowRoot.appendChild(container);
+        }
+        createCSS() {
+          const style = document.querySelector('style');
+          const variableStyle = document.createElement('style');
+          const bg = '#f0f0f0';
+          variableStyle.innerHTML = `
+            #customContextMenu {
+             --li-bg: ${bg};
+            }
+          `;
+          this.shadowRoot.appendChild(style)
+          this.shadowRoot.appendChild(variableStyle)
+        }
+      }
+
+      customElements.define('custom-menu', CustomMenu);
+    </script>
+</body>
+</html>
