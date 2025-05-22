@@ -3,9 +3,9 @@
 layout: home
 
 hero:
-  name: "欢迎来到我的博客"
-  text: "学习是有方法的，按照正确的方法，每个人都能学会编程"
-  tagline: 前端
+  name: "学习是有方法的，按照正确的方法，每个人都能学会编程"
+  # text: "学习是有方法的，按照正确的方法，每个人都能学会编程"
+  # tagline: 前端
   actions:
     - theme: brand
       text: 开始学习
