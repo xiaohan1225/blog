@@ -6,27 +6,45 @@
   <title>Document</title>
 </head>
 <body>
-  <my-component>Hello Web Components!</my-component>
-  <script>
-    class MyComponent extends HTMLElement {
-      constructor() {
-        super();
-        // 创建Shadow DOM
-        const shadow = this.attachShadow({mode: 'open'});
-        // 创建模板
-        const template = document.createElement('template');
-        template.innerHTML = `
-          <style>
-            p { color: blue; }
-          </style>
-          <p><slot></slot></p>
-        `;
-         // 将模板内容克隆到Shadow DOM
-        shadow.appendChild(template.content.cloneNode(true));
-      }
+  <!-- 定义一个模板 -->
+<template id="user-card-template">
+  <style>
+    .card {
+      border: 1px solid #ddd;
+      padding: 24px;
+      margin: 12px;
+      border-radius: 12px;
     }
-    // 注册自定义元素
-    customElements.define('my-component', MyComponent);
+  </style>
+  <div class="card">
+    <h2><slot name="name">默认名称</slot></h2>
+    <p><slot name="email">默认邮箱</slot></p>
+  </div>
+</template>
+<user-card>
+  <span slot="name">张三</span>
+  <span slot="email">zhangsan@example.com</span>
+</user-card>
+<script>
+  // 定义自定义元素
+  class UserCard extends HTMLElement {
+    constructor() {
+      super();
+      
+      // 创建影子DOM
+      const shadow = this.attachShadow({ mode: 'open' });
+      
+      // 获取模板内容
+      const template = document.getElementById('user-card-template');
+      const templateContent = template.content.cloneNode(true);
+      
+      // 将模板添加到影子DOM
+      shadow.appendChild(templateContent);
+    }
+  }
+  
+  // 注册自定义元素
+  customElements.define('user-card', UserCard);
   </script>
 </body>
 </html>

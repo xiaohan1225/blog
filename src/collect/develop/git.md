@@ -35,7 +35,7 @@ git rebase解决冲突：
 3. 修改好:wq保存即可
 批量rebase：
 1. git rebase -i ba90dc7ff4ab54f9bbb2ca89ddea031fa735c6d2
-2. :%s/pick /f /g  (:s/old/new/g   将当前行的所有字符串old替换为new)
+2. :%s/pick /f /g  (:%s/old/new/g   将当前行的所有字符串old替换为new)
 3. Ctrl + b 往上滚动一屏幕 找到第一个commit 改成s
 
 ## git注意点

@@ -44,3 +44,6 @@ $\color{red}{红色字}$ 或者 $\color{FF0000}{红色字}$
 githubstars: 
 
 ![xiaohan1225's GitHub stats](https://github-readme-stats.vercel.app/api?username=xiaohan1225&show_icons=true&count_private=true&hide_border=true&include_all_commits=true&layout=compact)
+
+
+访问`github`的图片：https://raw.githubusercontent.com/用户名/仓库名/分支名/资源目录/xxx.png
