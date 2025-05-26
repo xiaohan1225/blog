@@ -8,7 +8,7 @@
     #customContextMenu {
       display: none;
       position: absolute;
-      background: white;
+      background: var(--menu-bg, #fff);
       border: 1px solid #ccc;
       box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
       z-index: 100;
@@ -19,11 +19,13 @@
       padding: 0;
     }
     #customContextMenu li {
+      width: 72px;
       padding: 8px 15px;
+      box-sizing: border-box;
       cursor: pointer;
     }
     #customContextMenu li:hover {
-      background: var(--li-bg);
+      background: var(--li-bg, #f0f0f0);
     }
   </style>
   <script type="text/html">
@@ -48,6 +50,16 @@
             this.container.style.display = 'block';
             this.container.style.left = `${e.pageX}px`;
             this.container.style.top = `${e.pageY}px`;
+
+            const { width, height } = this.container.getBoundingClientRect()
+            if (e.clientY + height > document.documentElement.clientHeight) {
+              console.log('纵向超出了');
+              this.container.style.top = document.documentElement.clientHeight - height + 'px';
+            }
+            if (e.clientX + width > document.documentElement.clientWidth) {
+              console.log('横向超出了');
+              this.container.style.left = document.documentElement.clientWidth - width + 'px';
+            }
           })
 
           document.addEventListener('click', e => {
@@ -66,8 +78,10 @@
           const style = document.querySelector('style');
           const variableStyle = document.createElement('style');
           const bg = '#f0f0f0';
+          const menuBg = '#fff';
           variableStyle.innerHTML = `
             #customContextMenu {
+             --menu-bg: ${menuBg};
              --li-bg: ${bg};
             }
           `;

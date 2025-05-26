@@ -15,6 +15,7 @@ export default {
       { text: '编程语言语言标识与JavaScript语言设计', link: '/collect/javascript/js-base/006' },
       { text: 'JavaScript函数式编程', link: '/collect/javascript/js-base/007' },
       { text: 'JavaScript冷知识', link: '/collect/javascript/js-base/javascript冷知识' },
+      { text: '自定义右键菜单', link: '/collect/javascript/js-base/自定义右键菜单' },
   ],
   '/collect/typescript': [
       { text: '1、ts介绍', link: '/collect/typescript/1、ts介绍' },
