@@ -1,1 +1,0 @@
-import{_ as t,c as a,o as r,j as o}from"./chunks/framework.DE6vaMEz.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"名言.md","filePath":"名言.md"}'),s={name:"名言.md"};function n(c,e,p,d,l,_){return r(),a("div",null,e[0]||(e[0]=[o("p",null,"越约束越自由",-1)]))}const f=t(s,[["render",n]]);export{m as __pageData,f as default};

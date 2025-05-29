@@ -1,1 +1,0 @@
-import{_ as e,c as t,o}from"./chunks/framework.DE6vaMEz.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"collect/node/nestjs/001.md","filePath":"collect/node/nestjs/001.md"}'),s={name:"collect/node/nestjs/001.md"};function c(n,a,r,d,l,_){return o(),t("div")}const m=e(s,[["render",c]]);export{i as __pageData,m as default};
