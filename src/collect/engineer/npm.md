@@ -26,6 +26,11 @@ npm login --username <username> --password <password> --email <email>
 `npm view <package-name> devDependencies`: 查看包的开发依赖
 
 ##  nrm 切换镜像源
+- nrm ls: 查看所有可用的镜像源
+- nrm use taobao: 切换到淘宝镜像源
+- `nrm add <registry> <url>`
+- `nrm del <registry>`
+- `nrm test <registry>`: 测试镜像源的响应速度
 
 ## npm 配置
 - npm config list
@@ -34,3 +39,4 @@ npm login --username <username> --password <password> --email <email>
 
 ## 常用命令
 - npm ls -g : 查看全局安装的包
+- npm-check -u : 升级包
