@@ -19,8 +19,8 @@ bug产生：先进入课时播放页，然后判断用户没买这个们课程�
 
 报错信息：
 
-- <font color='red'>[Vue warn]: Error in nextTick: "NotFoundError: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node."</font>
-- <font color='red'>DOMException: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.</font>
+- `<font color='red'>[Vue warn]: Error in nextTick: "NotFoundError: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node."</font>`
+- `<font color='red'>DOMException: Failed to execute 'insertBefore' on 'Node': The node before which the new node is to be inserted is not a child of this node.</font>`
 
 报错条件：
 1. 一个元素下面是一个弹窗，而弹窗被挂载到body下面，两个元素都用v-if控制
@@ -38,4 +38,46 @@ newVnode：Aside组件 插屏弹框组件  comment注释节点 open-app组件
 2. `debugger`能力，学会了如何在项目中调试`vue`源码。
 
 
+## 引入vite-plugin-static-copy打包报错
+
+
+```js
+// package.json
+"devDependencies": {
+  "vite-plugin-static-copy": "^3.0.0"
+}
+```
+
+```js
+// vite.config.js
+import { viteStaticCopy } from 'vite-plugin-static-copy';
+
+export default defineConfig({
+  plugins: [
+    viteStaticCopy({
+      targets: [
+        {
+          src: 'robots.txt',  // 源文件路径
+          dest: '',   // 目标路径
+        }
+       ]
+    })
+  ]
+})
+```
+
+然后打包报错：
+
+`Error [ERR_REQUIRE_ESM]: Must use import to load ES Module: /Users/btclass/project/scrm-web/node_modules/vite-plugin-static-copy/dist/index.js require() of ES modules is not supported`.
+
+原因是因为项目使用的版本是`14`，`vite-plugin-static-copy`的node版本更高，不兼容导致的，所以降低`vite-plugin-static-copy`的版本。
+
+使用`npm install vite-plugin-static-copy@0 -D`命令降低版本后，打包成功。
+
+```js
+// package.json 
+"devDependencies": {
+  "vite-plugin-static-copy": "^0.17.1"
+}
+```
 
