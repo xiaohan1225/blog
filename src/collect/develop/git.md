@@ -20,6 +20,10 @@ cat id_rsa.pub
 - `git remote remove <name>`：该子命令取消本地仓库与远程仓库之间的关联。`<name>` 是要删除的远程仓库的名称。
 - `git remote set-url <name> <new-url>`：该子命令更改现有远程仓库的 URL。`<name>` 是远程仓库的名称，`<new-url>` 是要指定的新 URL。
 
+## git stash
+- git stash apply stash@{2} : 指定特定版本 的 stash 恢复
+- git stash drop stash@{2} : 指定特定版本 的 stash 删除
+
 
 
 ## git commit 
