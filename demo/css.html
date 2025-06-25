@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <style>
+    @import './a.css';
+    #app {
+      width: 300px;
+      height: 300px;
+      border: 1px solid red;
+      /* clip-path: inset(100%); */
+      /* clip-path: circle(0);   半径为0的圆形 */
+       /* clip-path: polygon(0 0, 0 0, 0 0); 零面积多边形 */
+       /* transform: scale(0,0) */
+       /* visibility: hidden; */
+       /* opacity: 0; */
+       /* display: none; */
+       font-size: 14px;
+    }
+    .a {
+      width: 2em;
+      height: 100px;
+      border: 1px solid green;
+      font-size: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    app
+    <div class="a">
+      aaa
+      <!-- <div class="b">bbb</div> -->
+    </div>
+  </div>
+  <p>11</p>
+  <script>
+    app.onclick = () => {
+      alert(1)
+    }
+  </script>
+  <link rel="stylesheet" href="./b.css">
+
+</body>
+
+</html>

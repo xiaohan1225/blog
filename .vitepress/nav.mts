@@ -1,5 +1,9 @@
 export default [
     { text: '开始', link: '/' },
+    { 
+      text: '前端面试篇', 
+      link: '/collect/interview/复习/1.网络'
+    },
     {
       text: 'JavaScript篇',
       items: [
@@ -28,9 +32,5 @@ export default [
         { text: '浏览器原理篇', link: '/collect/browser/002' },
         { text: 'chrome插件篇', link: '/collect/engineer/1.cli' },
       ]
-    },
-    { 
-      text: '前端面试篇', 
-      link: '/collect/interview/复习/1.网络'
     },
 ]
