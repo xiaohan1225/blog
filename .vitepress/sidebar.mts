@@ -6,6 +6,17 @@ export default {
   //         { text: 'Runtime API Examples', link: '/api-examples' }
   //     ]
   // }
+  '/collect/vue': [
+    { text: 'vue2响应式原理', link: '/collect/vue/vue2响应式原理' },
+    { text: 'vue3的出现背景？解决的问题', link: '/collect/vue/vue3的出现背景？解决的问题' },
+    { text: 'vue3的升级点', link: '/collect/vue/vue3的升级点' },
+    { text: 'vue3响应式原理', link: '/collect/vue/vue3响应式原理' },
+    { text: 'vue中scoped原理', link: '/collect/vue/vue中scoped原理' },
+    { text: 'vue性能优化技巧', link: '/collect/vue/vue性能优化技巧' },
+    { text: 'vue的虚拟DOM和diff算法', link: '/collect/vue/vue的虚拟DOM和diff算法' },
+    { text: 'Vue.extend', link: '/collect/vue/Vue.extend' },
+    { text: 'vue高级使用技巧', link: '/collect/vue/vue高级使用技巧' },
+  ],
   '/collect/javascript': [
     { text: 'JavaScript历史', link: '/collect/javascript/js-base/001' },
     { text: 'JavaScript异步编程的实现方式', link: '/collect/javascript/js-base/002' },

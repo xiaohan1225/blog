@@ -1,12 +1,3 @@
----
-title: 001 Vue2响应式原理
-date: 2022-02-17
-categories:
-  - Vue
-tags:
-  - Vue2.0
-sidebar: "auto"
----
 
 ![图片加载失败](../../../assets/images/vue/vue2/响应式原理.png)
 

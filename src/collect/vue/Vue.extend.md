@@ -39,7 +39,7 @@ export default {
 
 使用`Vue.extend`手动挂载`HelloWorld`组件。
 
-```javascript
+```html
 <template>
   <div id="app">
     app <br/>
@@ -86,8 +86,8 @@ document.body.appendChild(instance.$el);
 
 接下来就遇到问题了，因为执行完这段代码后，界面毫无反应。下面是`Dialog.vue`的代码，我这里简化了业务代码只放了一个`demo`。
 
-```javascript
-// Dialog.vue
+```html
+<!-- Dialog.vue -->
 <template>
    <el-dialog
     title="提示"
