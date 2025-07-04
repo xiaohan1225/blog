@@ -3,9 +3,10 @@
 layout: home
 
 hero:
-  name: "学习是有方法的，按照正确的方法，每个人都能学会编程"
-  # text: "学习是有方法的，按照正确的方法，每个人都能学会编程"
-  # tagline: 前端
+  # name: "学习是有方法的，按照正确的方法，每个人都能学会编程"
+  name: 小寒的编程知识库
+  # text: "由 Vite 和 Vue 驱动的静态站点生成器"
+  tagline: 前端知识、前端面试、全栈开发、个人开发经验分享
   actions:
     - theme: brand
       text: 开始学习
