@@ -4,7 +4,7 @@
 3. CSR降级
 4. 浏览器API兼容
 5. 自定义
-6. 流式渲染
+6. 流式渲染(页面边渲染边响应，而不是等整个组件树渲染完毕之后再响应，这样可以让响应提前到达客户端，提升了首屏加载速度,React 提供了 rendertonodestream（官方文档显示已弃用），Vue 则提供了 renderToNodeStream)
 7. SSR缓存
 8. 性能监控
 9. SSG/ISR/SPR
