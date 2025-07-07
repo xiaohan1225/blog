@@ -3,11 +3,11 @@
 
 ## pnpm 的优势
 ### 可以大大节约磁盘空间
-pnpm 的安装包是以全局的方式进行存储的，存储目录为`~/.pnpm-store`，这样的话，相同的包在只会安装一次，然后通过硬链接（`Hard Links`）机制，将项目的 `node_modules` 中的包通过硬链接指向全局 store 存储。
+pnpm 的安装包是以全局的方式进行存储的，存储目录为`~/.pnpm-store`，所有项目共享，这样的话，相同的包在只会安装一次，然后通过硬链接（`Hard Links`）机制，将项目的 `node_modules` 中的包通过硬链接指向全局 store 存储。
 
-得益于内部采用了硬链接（`Hard Links`）机制，
 ### 安装速度快
-创建非扁平化的 `node_modules` 文件夹，目录结构很清晰。
+
+### 创建非扁平化的 `node_modules` 目录
 ### 内置 monorepo 支持
  pnpm 提出了 `workspace` 的概念，内置了对 `monorepo` 的支持。
 
