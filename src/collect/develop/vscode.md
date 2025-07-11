@@ -43,3 +43,11 @@
 选中当前位置到所在单词末尾的文字 – Shift + Option + 右方向键→
 选中当前位置到整个文档开头的文字 – Shift + Command + 上方向键↑
 选中当前位置到整个文档末尾的文字 – Shift + Command + 下方向键↓
+
+
+## vscode插件
+- file-tree-generator: 生成目录树
+- GitHub Repositories: 远程查看github仓库
+- javascript console utils: 打印
+- Template String Converter：普通字符串转成模板字符串
+- Version Lens: 显示依赖包的最新版本号
