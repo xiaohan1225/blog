@@ -40,4 +40,11 @@ export default [
       { text: 'chrome插件篇', link: '/collect/engineer/1.cli' },
     ]
   },
+   {
+    text: '工作和编程技能',
+    items: [
+      { text: 'vim篇', link: '/collect/vim/1.vim两种模式、基本移动操作以及复制剪切粘贴' },
+      { text: '工作心得', link: '/collect/work/1.如何封装组件' },
+    ]
+  },
 ]
