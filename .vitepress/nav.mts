@@ -20,6 +20,13 @@ export default [
     ]
   },
   {
+    text: 'CSS篇',
+    items: [
+      { text: 'initial、revert、unset的区别', link: '/collect/css/initial、revert、unset的区别' },
+      { text: 'css知识点', link: '/collect/css/css知识点' },
+    ]
+  },
+  {
     text: '前端工程化篇',
     items: [
       { text: '脚手架篇', link: '/collect/engineer/1.cli' },

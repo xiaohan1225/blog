@@ -33,5 +33,9 @@ export default {
   '/collect/typescript': [
     { text: '1、ts介绍', link: '/collect/typescript/1、ts介绍' },
     { text: '类型推论、类型别名', link: '/collect/typescript/类型推论、类型别名' },
-  ]
+  ],
+  '/collect/css': [
+    { text: 'initial、revert、unset的区别', link: '/collect/css/initial、revert、unset的区别' },
+    { text: 'css知识点', link: '/collect/css/css知识点' },
+  ],
 }
