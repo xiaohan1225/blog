@@ -49,5 +49,17 @@
 - file-tree-generator: 生成目录树
 - GitHub Repositories: 远程查看github仓库
 - javascript console utils: 打印
-- Template String Converter：普通字符串转成模板字符串
+- Template String Converter：普通字符串转成模板字符串(如果需要在.vue文件中生效，需要设置下)
+
+```json
+"template-string-converter.validLanguages":[
+  "svelte",
+  "typescript",
+  "javascript",
+  "typescriptreact",
+  "javascriptreact",
+  "vue"
+]
+```
+
 - Version Lens: 显示依赖包的最新版本号
