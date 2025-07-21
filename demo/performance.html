@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 手动开始/结束性能记录
+      // console.profile('性能分析');
+      // console.time('cost');
+      // 使用performance.memory(仅Chrome支持)
+      if (performance.memory) {
+        setInterval(() => {
+          console.log(
+            `内存使用: ${performance.memory.usedJSHeapSize / 1024 / 1024} MB`
+          );
+        }, 3000);
+      }
+      requestAnimationFrame(checkFPS);
+
+      setInterval(() => {
+        let j = 0;
+        for (let i = 0; i < 100000000; i++) {
+          // console.log(i);
+          j = i + 1;
+        }
+        const k = j + 1;
+        window.k = k;
+        console.log("执行完成");
+      }, 300);
+      // console.timeEnd('cost');
+      // 执行可能卡顿的代码
+      // console.profileEnd('性能分析');
+
+      let lastTime = performance.now();
+      let frameCount = 0;
+
+      function checkFPS() {
+        const now = performance.now();
+        frameCount++;
+
+        if (now > lastTime + 1000) {
+          const fps = Math.round((frameCount * 1000) / (now - lastTime));
+          console.log(`当前FPS: ${fps}`);
+
+          if (fps < 30) {
+            console.warn("帧率过低，可能存在性能问题");
+          }
+
+          frameCount = 0;
+          lastTime = now;
+        }
+
+        requestAnimationFrame(checkFPS);
+      }
+    </script>
+  </body>
+</html>
