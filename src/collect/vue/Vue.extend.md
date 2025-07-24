@@ -1,7 +1,5 @@
 ## 前言
 
-大家好，我是小寒！
-
 事情是这样的，我们在开发PC端项目的时候，封装了一个`Dialog`组件，我希望这个组件能像`Element UI`里面的`Message`组件一样，通过`this.$message.success()`这样的类似API方式去调用，这时候就需要`Vue.extend`出场了。
 
 ## Vue.extend介绍

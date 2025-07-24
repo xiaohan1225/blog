@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 分配100万个32位浮点数（约4MB内存）
+      // window.largeFloatArray = new Float32Array(1000000);
+      let largeFloatArray = new Float32Array(1000000);
+      function test() {
+        
+        console.log("largeFloatArray: ", largeFloatArray);
+        largeFloatArray = null;
+      }
+      test();
+    </script>
+  </body>
+</html>
