@@ -38,9 +38,10 @@ export default [
     items: [
       { text: '浏览器原理篇', link: '/collect/browser/002' },
       { text: 'chrome插件篇', link: '/collect/engineer/1.cli' },
+      { text: '性能优化篇', link: '/collect/performance/页面卡顿' },
     ]
   },
-   {
+  {
     text: '工作和编程技能',
     items: [
       { text: 'vim篇', link: '/collect/vim/1.vim两种模式、基本移动操作以及复制剪切粘贴' },
