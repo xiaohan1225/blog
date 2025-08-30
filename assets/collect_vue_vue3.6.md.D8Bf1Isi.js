@@ -1,0 +1,1 @@
+import{_ as e,c as t,o as c}from"./chunks/framework.BezmCoJM.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"collect/vue/vue3.6.md","filePath":"collect/vue/vue3.6.md"}'),a={name:"collect/vue/vue3.6.md"};function o(r,s,n,l,_,p){return c(),t("div")}const i=e(a,[["render",o]]);export{d as __pageData,i as default};
