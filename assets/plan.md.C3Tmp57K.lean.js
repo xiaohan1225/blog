@@ -1,1 +1,0 @@
-import{_ as t,c as e,o,ae as l}from"./chunks/framework.BezmCoJM.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"plan.md","filePath":"plan.md"}'),i={name:"plan.md"};function r(n,a,s,d,_,c){return o(),e("div",null,[...a[0]||(a[0]=[l("",5)])])}const m=t(i,[["render",r]]);export{h as __pageData,m as default};
