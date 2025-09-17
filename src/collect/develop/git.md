@@ -29,7 +29,7 @@ cat id_rsa.pub
 ## git commit 
 如何修改最近一次的commit信息: git commit --amend
 1. 如果只需要追加修改，而不修改上次提交信息: git commit --amend --no-edit
-2. 如果只想修改上次提交信息，而不是追加修改: git commit --amend --only -m "new message"
+2. 如果只想修改上次提交信息，而不是追加修改: git commit --amend -m "new message"
 
 ## git rebase
 git rebase -i ba90dc7ff4ab54f9bbb2ca89ddea031fa735c6d2
