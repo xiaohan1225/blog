@@ -513,6 +513,7 @@ body {
 	transition:all 0.5s;
 }
 .link1,.link2 {
+  display: block;
 	width:170px;
 	height:60px;
 	border:2px solid #fff;
@@ -522,15 +523,19 @@ body {
 	text-align:center;
 	background: #4169E1;
 	transition:all 0.8s;
+  text-decoration: none;
+  color: #fff;
+  line-height: 60px;
+  text-align: center;
 }
 .link2 {
 	cursor:not-allowed;
 }
-.bt1,.bt2 {
+/* .bt1,.bt2 {
 	position:relative;
 	top:22%;
 	vertical-align:middle;
-}
+} */
 
 /* a.lk1:hover {
 	color:#79a8ae;
