@@ -1,0 +1,1 @@
+import{_ as a,c as t,o,ae as l}from"./chunks/framework.BKNbpbHR.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"money.md","filePath":"money.md"}'),x={name:"money.md"};function i(r,e,n,_,s,c){return o(),t("div",null,[...e[0]||(e[0]=[l("",5)])])}const m=a(x,[["render",i]]);export{d as __pageData,m as default};
