@@ -8,7 +8,8 @@
 步骤：
 1. 客户端/服务端两个入口，vuex/vue-router不能单例
 2. webpack打包配置，客户端和服务端分别打包
-3. 数据预拉取：serverPrefetch，服务端数据同步到客户端 INITIAL_STATE
+  - 打包成commonjs、 服务端打包加载 new VueSSRServerPlugin() : 客户端打包加载 new VueSSRClientPlugin(),
+3. 数据预拉取：serverPrefetch，服务端数据同步到客户端 INITIAL_STATE，客户端 replaceState
 4. jsdom模拟客户端环境
 5. 客户端激活`data-server-rendered="true"`
 
@@ -22,6 +23,24 @@
 日志统计+报错监控：
 1. 统计SSR成功率，收集报错，分析原因
 2. 服务器性能监控，并发高时是否需要扩容
+
+
+注意点：
+1. `vue`的版本和`vue-server-renderer`的版本必须匹配，我用的都是`2.6.14`版本
+2. 需要使用`history路由`，因为`hash路由`提交不到服务器上
+3. 两个入口
+4. 配置 `ssr plugin`，在 `webpack` 打包时生成 `manifest.json` 文件
+5. 用三方库 `jsdom` 模拟 `window` 对象，`localstorage` 等环境
+6. 降低到客户端渲染
+
+提高SEO：
+1. 指标: 关键词排名，收录量，点击率，停留时间，跳出率
+2. 技巧
+  - 写一个sitemap网站导航 用ssr渲染，另外如果一些网站没有被收录，可以去对应搜索引擎提交sitemap.xml
+  - 针对不同的路由，渲染不同的tdk，比如首页和文章页的tdk不一样
+3. 在三方网站上同步发文，比如知乎、百家号等，里面通过链接可跳转得到到自己的网站
+
+
 
 ## webpack迁移到vite
 核心目的：
