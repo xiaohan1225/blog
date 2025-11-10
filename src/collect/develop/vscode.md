@@ -27,6 +27,9 @@
 - `Ctrl/Command + Shift + X` 打开扩展面板
 - `Ctrl/Command + B` 打开/关闭左边侧边栏
 
+## 复制一行
+操作系统快捷键Windows / Linux：`Shift + Alt + ↓`
+macOS：`Shift + Option + ↓`
 
 ## 移动光标
 跳到本行开头 – Command + 左方向键←
