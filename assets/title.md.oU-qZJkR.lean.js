@@ -1,1 +1,0 @@
-import{_ as i,c as e,o as t,ae as a}from"./chunks/framework.BKNbpbHR.js";const m=JSON.parse('{"title":"记录好的写作标题","description":"","frontmatter":{},"headers":[],"relativePath":"title.md","filePath":"title.md"}'),o={name:"title.md"};function n(r,l,s,d,_,c){return t(),e("div",null,[...l[0]||(l[0]=[a("",4)])])}const S=i(o,[["render",n]]);export{m as __pageData,S as default};
