@@ -47,6 +47,9 @@ macOS：`Shift + Option + ↓`
 选中当前位置到整个文档开头的文字 – Shift + Command + 上方向键↑
 选中当前位置到整个文档末尾的文字 – Shift + Command + 下方向键↓
 
+alt + shift + 左/右方向键：大块选择
+alt + shift + 上/下方向键：复制当前行
+
 
 ## vscode插件
 - file-tree-generator: 生成目录树
@@ -66,3 +69,6 @@ macOS：`Shift + Option + ↓`
 ```
 
 - Version Lens: 显示依赖包的最新版本号
+
+## 跳转到最近一次修改的位置
+ctrl/command + k, ctrl/command + q
