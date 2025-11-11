@@ -16,7 +16,7 @@ export default {
     { text: 'vue的虚拟DOM和diff算法', link: '/collect/vue/vue的虚拟DOM和diff算法' },
     { text: 'Vue.extend', link: '/collect/vue/Vue.extend' },
     { text: 'vue高级使用技巧', link: '/collect/vue/vue高级使用技巧' },
-    { text: 'vue面试题', link: '/collect/vue/vue面试题' },
+    { text: 'vue面试题-初、中级篇', link: '/collect/vue/vue面试题-初、中级篇' },
   ],
   '/collect/javascript': [
     { text: 'JavaScript历史', link: '/collect/javascript/js-base/001' },
