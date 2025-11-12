@@ -17,6 +17,7 @@ export default {
     { text: 'Vue.extend', link: '/collect/vue/Vue.extend' },
     { text: 'vue高级使用技巧', link: '/collect/vue/vue高级使用技巧' },
     { text: 'vue面试题-初、中级篇', link: '/collect/vue/vue面试题-初、中级篇' },
+    { text: 'vue面试题-高级篇', link: '/collect/vue/vue面试题-高级篇' },
   ],
   '/collect/javascript': [
     { text: 'JavaScript历史', link: '/collect/javascript/js-base/001' },

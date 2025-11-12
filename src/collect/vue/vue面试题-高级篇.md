@@ -1,5 +1,5 @@
-## 五、Vue 中的 diff 原理
-Vue的diff算法是平级比较，不考虑跨级比较的情况。内部采用**深度递归的方式 + 双指针**的方式进行比较。
+## 1、介绍一下 Vue 中的 diff 算法？
+Vue 的 diff 算法是平级比较，不考虑跨级比较的情况。内部采用**深度递归的方式 + 双指针**的方式进行比较。
 
 比较过程:
 
@@ -15,17 +15,9 @@ Vue3 在这个比较过程的基础上增加了**最长递增子序列**实现di
 - 最小化 DOM 操作次数。
 
 
-## 六、v-show和v-if的原理
+## 2、v-show 和 v-if 的原理
 
-**相同点**：控制元素在页面是否显示。
-
-**不同点**：
-- 控制手段不同：`v-show` 控制的是 `css` 的 `display` 属性是否为 `none` 来控制元素的是否隐藏，而 `v-if` 是直接不渲染 DOM 元素或者直接删除 DOM 元素。
-- 控制过程区别：`v-if` 切换有一个局部编译/卸载的过程，切换过程中合适地销毁和重建内部的事件监听和子组件，如果控制的是组件，也会执行组件的生命周期钩子；而`v-show` 只是简单的基于css切换。
-- 编译区别：`v-if` 在编译过程中会被转化成**三元表达式**,条件不满足时不渲染此节点。`v-show` 会被编译成指令，条件不满足时控制样式将对应节点隐藏 （内部其他指令依旧会继续执行）。
-- 性能消耗：`v-if` 比 `v-show` 有更高的性能消耗。
-
-**使用场景**：频繁切换 + 不需要销毁状态用 `v-show`，反之用 `v-if`。
+简单来说，`v-if` 内部是通过一个三元表达式来实现的，而 `v-show` 则是通过控制 DOM 元素的 `display` 属性来实现的。
 
 v-if 源码：
 ```js
@@ -71,7 +63,7 @@ v-show 源码：
 } 
 ```
 
-## 七、v-if 和 v-for  哪个优先级更高？
+## 3、v-if 和 v-for  哪个优先级更高？为什么？
 - vue2 中 `v-for` 的优先级比 `v-if` 高，它们作用于一个节点上会导致先循环后对每一项进行判断，浪费性能。
 - vue3 中 `v-if` 的优先级比 `v-for` 高，这就会导致 `v-if` 中的条件无法访问 `v-for` 作用域名中定义的变量别名。
 
@@ -122,9 +114,21 @@ function render() {
 
 > 所以不管是 `vue2` 还是 `vue3`，都不推荐同时使用 `v-if` 和 `v-for`，更好的方案是采用计算属性，或者在外层再包裹一个容器元素，将 `v-if` 作用在容器元素上。
 
-## nextTick 的使用场景
+## nextTick 的原理
+### Vue2 的 nextTick：
+- 首选微任务：
+  - **Promise.resolve().then(flushCallbacks)**：最常见，使用 Promise 创建微任务。
+  - **MutationObserver**：如果 Promise 不可用，创建一个文本节点，修改其内容触发 MutationObserver 的观察器回调。
+- 回退宏任务：
+  - **setImmediate**：如果环境支持 setImmediate，比如 node 环境，则会优先使用 setImmediate 。
+  - **setTimeout(flushCallbacks, 0)**：最后使用定时器。
 
-## 九、Vue.set方法是如何实现的?
+这里体现了**优雅降级**的思想。
+
+### Vue3 的 nextTick：
+- 由于 Vue3 不再考虑 promise 的兼容性，所以 nextTick 的实现原理就是 promise.then 方法。
+
+## Vue.set方法是如何实现的?
 **Vue2的实现**：在 Vue 2 中，Vue.set 的实现主要位于 `src/core/observer/index.js` 中：
 ```ts
 export function set (target: Array | Object, key: any, val: any): any {
@@ -157,7 +161,7 @@ Vue3 中 set 方法已经被移除，因为 proxy 天然弥补 vue2 响应式的
 
 ## Vue的组件渲染流程?
 1. 在渲染父组件时会创建父组件的虚拟节点,其中可能包含子组件的标签
-2. 在创建虚拟节点时,获取组件的定义使用Vue.extend生成组件的构造函数。
+2. 在创建虚拟节点时,获取组件的定义使用 `Vue.extend` 生成组件的构造函数。
 3. 将虚拟节点转化成真实节点时，会创建组件的实例并且调用组件的$mount方法。
 4. 所以组件的创建过程是先父后子。
 
@@ -273,6 +277,93 @@ mixin 中有很多缺陷 "命名冲突问题"、"依赖问题"、"数据来源�
 ## Vue.js 如何自定义插件
 
 ## Vue.js 应用中常见的内存泄漏来源有哪些？
+
+1. 未清理的事件监听器、定时器、动画
+```vue
+<script setup>
+import { onMounted, onUnmounted } from 'vue';
+
+let timer = null;
+let controller = null;
+let raf = null;
+
+onMounted(() => {
+  // 定时器
+  timer = setInterval(() => {}, 1000);
+  // 动画
+  raf = requestAnimationFrame(() => {});
+  // 事件监听
+  window.addEventListener('resize', handleResize);
+});
+
+onUnmounted(() => {
+  clearInterval(timer);
+  cancelAnimationFrame(this.raf);
+  window.removeEventListener('resize', handleResize);
+});
+</script>
+```
+2. 未移除的第三方库实例
+```vue
+<script setup>
+import { onMounted, onUnmounted } from 'vue';
+
+let chart = null;
+
+onMounted(() => {
+  chart = echarts.init(this.$refs.chart);
+});
+
+onUnmounted(() => {
+  chart?.dispose();
+});
+</script>
+```
+3. 事件总线（Event Bus）未解绑
+
+vue2 用可以用 `new Vue` 全局创建一个事件总线实例，或者在组件中直接使用 `this.$on`、`this.$emit`、`this.$off`。
+
+vue3 则需要借助第三库，比如 mitt 来实现事件总线。
+
+
+```vue
+<script setup>
+import { onMounted, onUnmounted } from 'vue';
+import mitt from 'mitt';
+
+// 创建事件总线实例
+const emitter = mitt();
+
+onMounted(() => {
+  emitter.on('update', this.handler);
+});
+
+onUnmounted(() => {
+  emitter.off('update', this.handler);
+});
+</script>
+```
+
+顺便提一下， vue3 为啥去掉 `$on、$emit、$off` 这些 API，主要有以下原因：
+1. 设计理念的调整
+
+Vue 3 更加注重组件间通信的明确性和可维护性。$on 这类事件 API 本质上是一种 "发布 - 订阅" 模式，容易导致组件间关系模糊（多个组件可能监听同一个事件，难以追踪事件来源和流向）。Vue 3 推荐使用更明确的通信方式，如：
+-   父子组件通过 props 和 emit 通信
+-   跨组件通信使用 provide/inject 或 Pinia/Vuex 等状态管理库
+-   复杂场景可使用专门的事件总线库（如 mitt
+
+2. 与 Composition API 的适配
+
+Vue 3 主推的 Composition API 强调逻辑的封装和复用，而 $on 基于选项式 API 的实例方法，与 Composition API 的函数式思维不太契合。移除后，开发者可以更自然地使用响应式变量或第三方事件库来实现类似功能。
+
+3. 减少潜在问题
+- $on 容易导致内存泄漏（忘记解绑事件）
+- 事件名称可能冲突（全局事件总线尤其明显）
+- 不利于 TypeScript 类型推断，难以实现类型安全
+
+### 4. 未清理的 Watcher
+
+Vue 本身不会泄漏内存，泄漏几乎都来自**开发者未清理的副作用**。养成“创建即清理”的习惯，使用 `beforeDestroy` 或者 `onUnmounted` 集中清理，在使用 `keep-alive` 的组件中，视情况在 `deactivated` 钩子中清理资源。
 
 ## Vue.js 中的 Vue-loader 是什么？
 
