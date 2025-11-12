@@ -1,0 +1,1 @@
+import{_ as l,c as e,o as i,ae as o}from"./chunks/framework.oZIXsALx.js";const p=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"money.md","filePath":"money.md"}'),t={name:"money.md"};function r(n,a,x,s,_,d){return i(),e("div",null,[...a[0]||(a[0]=[o("",11)])])}const h=l(t,[["render",r]]);export{p as __pageData,h as default};
