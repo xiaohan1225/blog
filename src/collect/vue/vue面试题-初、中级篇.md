@@ -413,6 +413,6 @@ export default {
 2. **组件更新阶段**：父 beforeUpdate → 子 beforeUpdate → 子 updated → 父 updated。
 2. **组件销毁阶段**：父 beforeDestroy → 子 beforeDestroy → 子 destroyed → 父 destroyed。
 
-
-## 结语
-以上是整理的 20+ Vue 初、中级的高频面试题，如有错误或者可以优化的地方欢迎评论区指正，后续还会更新 Vue 面试题高级篇。
+## 22、watch 和 watchEffect 的区别？
+- watchEffect 立即运行一个函数，然后被动地追踪它的依赖，当这些依赖改变时重新执行该函数。
+- watch 侦测一个或多个响应式数据源并在数据源变化时调用一个回调函数。

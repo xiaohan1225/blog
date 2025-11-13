@@ -10,16 +10,18 @@
 
 这主要有两种方式，一个是使用`Object.defineProperty`，另一个是ES6提供的`Proxy`。而`Proxy`在浏览器的支持度并不理想，所以vue2.0当时实现的时候采用了`Object.defineProperty`，重写属性的代码如下:
 ```js
-function defineReactive(data, key, val) {
-    Object.defineProperty(data, key, {
+function defineReactive(obj, key, val) {
+    Object.defineProperty(obj, key, {
         configurable: true,
         enumerable: true,
         get() {
+            // ... 收集依赖逻辑
             return val
         },
         set(newVal) {
             if (newVal === val) return
             val = newVal
+            // ...触发依赖更新逻辑
         }
     })
 }
