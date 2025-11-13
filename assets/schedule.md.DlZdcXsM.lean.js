@@ -1,1 +1,0 @@
-import{_ as i,c as e,o as a,ae as t}from"./chunks/framework.oZIXsALx.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"schedule.md","filePath":"schedule.md"}'),r={name:"schedule.md"};function o(s,l,n,c,d,_){return a(),e("div",null,[...l[0]||(l[0]=[t("",4)])])}const m=i(r,[["render",o]]);export{h as __pageData,m as default};
