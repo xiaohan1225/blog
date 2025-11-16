@@ -19,6 +19,7 @@ export default {
     { text: 'vue面试题-初、中级篇', link: '/collect/vue/vue面试题-初、中级篇' },
     { text: 'vue面试题-高级篇', link: '/collect/vue/vue面试题-高级篇' },
     { text: 'vuex面试题', link: '/collect/vue/vuex面试题' },
+    { text: 'vue-router面试题', link: '/collect/vue/vue-router面试题' },
   ],
   '/collect/javascript': [
     { text: 'JavaScript历史', link: '/collect/javascript/js-base/001' },

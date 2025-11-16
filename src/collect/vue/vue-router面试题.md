@@ -19,3 +19,16 @@
 
 - hash模式：hash + hashChange 兼容性好但是不美观
 - history模式: historyApi+ popState 虽然美观，但是刷新会出现404需要后端进行配置
+
+## vue 项目本地开发完成后部署到服务器后报 404 是什么原因呢？
+
+如果你使用的是 Vue Router 的 history 模式。刷新时会像服务端发起请求，服务端无法响应到对应的资源，所以会出现 404 问题。需要在服务端进行处理将所有请求重定向到你的 Vue 应用的入口文件。
+
+配置后服务端不会在出现 404 问题，Vue 应用中要覆盖所有的路由情况。
+
+`nginx.conf` 配置方式：
+```bash
+location / {
+  try_files $uri $uri/ /index.html;
+}
+```
