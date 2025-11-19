@@ -25,7 +25,7 @@ export default {
     { text: 'JavaScript历史', link: '/collect/javascript/js-base/001' },
     { text: 'JavaScript异步编程的实现方式', link: '/collect/javascript/js-base/002' },
     { text: 'JavaScript作用域', link: '/collect/javascript/js-base/003' },
-    { text: 'JavaScript中常见源码实现', link: '/collect/javascript/js-base/004' },
+    { text: '前端面试高频手写题', link: '/collect/javascript/js-base/前端面试高频手写题' },
     { text: '手写Promise', link: '/collect/javascript/js-base/005' },
     { text: '编程语言语言标识与JavaScript语言设计', link: '/collect/javascript/js-base/006' },
     { text: 'JavaScript函数式编程', link: '/collect/javascript/js-base/007' },
