@@ -25,6 +25,7 @@ export default [
       { text: 'initial、revert、unset的区别', link: '/collect/css/initial、revert、unset的区别' },
       { text: 'css知识点', link: '/collect/css/css知识点' },
       { text: 'css性能优化', link: '/collect/css/css性能优化' },
+      { text: 'css面试题', link: '/collect/css/css面试题' },
     ]
   },
   {
