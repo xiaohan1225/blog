@@ -1,5 +1,9 @@
 <!-- 文章标题：学会这4个高级技巧，晋升Vue高级打工人 -->
 
+## vue2.6 可以在 script 中使用可选链运算符 ?.，但不能在 template 中使用，如果需要在 template 中使用，需要将 vue 版本升级到 vue2.7
+
+## key 和 $forceUpdate 有区别，key 变化会让组件卸载重新初始化，而 $forceUpdate 只会重新渲染组件数据
+
 ## 动态Watch
 
 在`vue`中，watch可以监听数据的变化后重新执行函数，平常一般是这样定义Watch的。
