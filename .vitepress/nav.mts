@@ -42,6 +42,7 @@ export default [
       { text: '浏览器原理篇', link: '/note/browser/002' },
       { text: 'chrome插件篇', link: '/note/engineer/1.cli' },
       { text: '性能优化篇', link: '/note/performance/页面卡顿' },
+      { text: 'EventLoop', link: '/note/browser/eventLoop' },
     ]
   },
   {
@@ -49,6 +50,7 @@ export default [
     items: [
       { text: 'vim篇', link: '/note/vim/1.vim两种模式、基本移动操作以及复制剪切粘贴' },
       { text: '工作心得', link: '/note/work/1.如何封装组件' },
+      { text: 'vscode快捷键和插件', link: '/note/vscode/快捷键和插件' },
     ]
   },
 ]
