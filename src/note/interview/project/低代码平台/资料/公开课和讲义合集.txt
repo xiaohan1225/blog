@@ -296,3 +296,6 @@ Vue3 Vapor Mode 无虚拟 Dom 原理揭秘，高级前端专家带你掌握编�
 直播回放：https://e2gaa.xetslk.com/sl/SGCfN
 飞书链接：https://u19tul1sz9g.feishu.cn/docx/Feq8dyeGEob755xF25wcfpmfn8g   密码：41J9253&
 
+🐘 AI 前端开发 Typescript、Zod 极速进阶与最佳实践，字节面试官：这是当下招聘 AI 全栈最基本要求
+直播回放：https://e2gaa.xetslk.com/sl/37bBdS
+飞书链接：https://u19tul1sz9g.feishu.cn/docx/CKN4d6HkDoG3fNxqXKic7XNdnrb   密码：9#j36953
