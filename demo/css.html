@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,19 +8,21 @@
 
   <style>
     @import './a.css';
+
     #app {
       width: 300px;
       height: 300px;
       border: 1px solid red;
       /* clip-path: inset(100%); */
       /* clip-path: circle(0);   半径为0的圆形 */
-       /* clip-path: polygon(0 0, 0 0, 0 0); 零面积多边形 */
-       /* transform: scale(0,0) */
-       /* visibility: hidden; */
-       /* opacity: 0; */
-       /* display: none; */
-       font-size: 14px;
+      /* clip-path: polygon(0 0, 0 0, 0 0); 零面积多边形 */
+      /* transform: scale(0,0) */
+      /* visibility: hidden; */
+      /* opacity: 0; */
+      /* display: none; */
+      font-size: 14px;
     }
+
     .a {
       width: 2em;
       height: 100px;
@@ -28,6 +31,7 @@
     }
   </style>
 </head>
+
 <body>
   <div id="app">
     app
@@ -36,8 +40,10 @@
       <!-- <div class="b">bbb</div> -->
     </div>
   </div>
-  <p>11</p>
+  <p>1</p>
   <script>
+    let value = 1
+    let valueee = 2;
     app.onclick = () => {
       alert(1)
     }
