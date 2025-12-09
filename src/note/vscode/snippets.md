@@ -7,7 +7,7 @@ https://code.visualstudio.com/docs/editing/userdefinedsnippets
 
 ## 前言
 
-`snippets` 意思是片段，在 `vscode` 中可以通过 `Snippets：Configure Snippets`命令，来定义全局、项目级、语言级代码片段，可以以事先定好的规则来快速生成一段代码，进而大幅提升我们的开发效率。
+`snippets` 意思是片段，在 `vscode` 中可以通过 `Snippets：Configure Snippets`命令，来定义全局、项目级、语言级代码片段，可以以事先定好的规则来快速生成一段代码，进而大幅提升我们的开发效率，可谓是工作提效利器。
 
 ## 如何创建 snippets？
 
