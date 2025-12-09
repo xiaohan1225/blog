@@ -51,6 +51,7 @@ export default [
       { text: 'vim篇', link: '/note/vim/1.vim两种模式、基本移动操作以及复制剪切粘贴' },
       { text: '工作心得', link: '/note/work/1.如何封装组件' },
       { text: 'vscode快捷键和插件', link: '/note/vscode/快捷键和插件' },
+      { text: 'vscode snippets', link: '/note/vscode/snippets' },
     ]
   },
 ]
