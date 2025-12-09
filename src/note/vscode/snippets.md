@@ -1,57 +1,113 @@
-[https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode](https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode)
-
-https://code.visualstudio.com/docs/editing/userdefinedsnippets
-
-
-参考文章：https://zhuanlan.zhihu.com/p/457062272
-
 ## 前言
 
-`snippets` 意思是片段，在 `vscode` 中可以通过 `Snippets：Configure Snippets`命令，来定义全局、项目级、语言级代码片段，可以以事先定好的规则来快速生成一段代码，进而大幅提升我们的开发效率，可谓是工作提效利器。
+`snippets` 意思是**片段**，在 `vscode` 中可以通过 `Snippets：Configure Snippets` 命令，可以定义**全局级（global）**、**项目级（Project）**、**语言级（Language）**代码片段，可以以事先定好的规则来快速生成一段代码，进而大幅提升我们的开发效率，可谓是工作提效利器。
 
-## 如何创建 snippets？
+## 1、如何创建 snippets？
+
+1. 在 vscode 按 `ctrl/command + shift + p`，输入 snippets，选择 `Snippets：Configure Snippets`，可以看到如下界面。
+
+![图片加载失败](../../assets/images/vscode/snippets-1.png)
+
+可根据需要选择 snippets 的创建类型，一般选择 global 全局级别的 snippets 即可。
+
+2. 选择 `New Global Snippets file`，输入文件名，按 `enter` 键，即进入 `snippets` 配置文件设置。
 
 snippets 文件以 JSON 编写，里面支持书写注释，并可定义无限数量的 snippets。
 
 ```json
-{
-  "base": {
-		"prefix": ["base"],
-		"body": [
-      "<template>",
-			"</template>",
-			"",
-			"<script lang=\"ts\">",
-			"</script>",
-			"",
-			"<style lang=\"scss\" scoped>",
-			"</style>"
-    ],
-		"description": "",
-    "scope": "javascript,html",
-	},
+"snippet": {
+	"scope": "javascript,typescript",
+	"prefix": "snippet",
+	"body": [
+		"console.log('$1');",
+	],
+	"description": "a simple snippet"
 }
 ```
 
-- **prefix**：必填，可以定义一个或多个触发词，由于子字符串匹配不是严格匹配的，因此输入 `bs` 可以匹配到 `base`。
+- **prefix**：必填，可以定义一个或多个触发词，由于子字符串匹配不是严格匹配的，类似正则匹配，比如输入 `bs` 可以匹配到 `base`。
 - **body**：必填，表示正文，是一行或多行内容，插入时会合并为多行。换行和嵌入的标签页将根据插入摘要的上下文进行格式化。
-  - 正文有三个占位符（按遍历顺序列出）：${1：数组}、${2：元素} 和 $0。你可以用 Tab 快速跳到下一个占位符，然后编辑占位符或跳到下一个。冒号后面的字符串 ：（如果有的话）是默认文本，例如 ${2：element} 中的元素 。占位符遍历顺序按数字递增，从一开始;零是一个可选的特殊情况，总是最后出现，并且在光标停留在指定位置时退出片段模式。
 - **description**：可选，表示片段的描述。
 - **scope**：可选，表示支持的语言，默认支持所有。
 
-## snippets 支持语法
+## 2、snippets 支持语法
 
-### Transform 变换
+### 2.1 光标控制
 
-<!-- "${TM_FILENAME/[\\.]/_/}"	example-123_456-TEST.js -->
+- 在 body 正文，它里面可以使用占位符：`$0、$1、$2...`，代表光标位置，$0 代表光标最后停留的位置，$1 代表光标第一个停留的位置，$2 代表光标第二个停留的位置，以此类推，在使用 `prefix` 触发词触发词生成代码片段后，可使用 `Tab` 键跳转到光标位置。
+- 同名光标可以同时使用多个，比如可以使用多个 `$1`，就可以实现**多光标同时编辑**。
+- 光标也可以加上默认值，比如 `${1：element}`，默认值为 `element`，如果触发词触发后，不输入任何内容，则光标位置默认为 `element`。
+- 光标也可以提供多个值来选择，比如 `${1|element1,element2,element3|}`，当按 `Tab` 键移动到对应光标时，会出现下拉框可供选择。
 
-### Variables  变量
-
-使用 `$name` 或 `${name：default}`，你可以插入变量的值。当变量未被设置时，默认值或空字符串会入。当变量未知（即其名称未定义）时，插入该变量名称并将其转换为占位符。
-
-## 多人项目协作时如何实现 snippets 共享？
+![图片加载失败](../../assets/images/vscode/snippets-2.png)
 
 
-## 如何在 markdown 文件中使用 vscode snippets?
+### 2.2 Variables 变量
 
+在 body 正文可以使用变量，语法是 `$name` 或 `${name：default}`。其中 `default` 表示默认值（占位符），当变量未知（即其名称未定义）时，会采用这个默认值。
+
+vscode 中内置一些变量：
+- `${TM_FILENAME}`：当前文件名。
+- `${TM_FILENAME_BASE}`：当前文件名（不带扩展名）。
+- `${TM_DIRECTORY}`：当前文件所在目录。
+- `${TM_FILEPATH}`：当前文件路径。
+- `${RELATIVE_FILEPATH}`：当前文档的相对（相对于已打开的工作区或文件夹）文件路径。
+- `${RELATIVE_FILEPATH}`：当前文档的相对（相对于已打开的工作区或文件夹）文件路径。
+- `${CLIPBOARD}`：剪切板的内容。
+- `${TM_SELECTED_TEXT}`：当前选择的文本或空字符串。
+- `${CURRENT_SECONDS_UNIX}`：10位 unix 时间戳。
+- ...等等。
+
+更多变量可查看[vscode snippets 官方文档](https://code.visualstudio.com/docs/editing/userdefinedsnippets#_variables)。
+
+### 2.3 Transform 变换
+
+还支持对变量做正则替换。
+
+举个例子，变量 `${TM_FILENAME}` 是表示当前文件名，比如当前文件名为 `test.js`，使用 `"${TM_FILENAME/[\\.]/_/}"`，表示将文件名中的 `.` 替换为 `_`，会把 `test.js` 变成 `test_js`。
+
+这个语法怎么理解呢？
+
+拿 js 对比来说，比如当前字符串 s 为 `test.js`，使用正则替换 `s.replace(/(.+)\.js/i, '$1df')`，其输出结果为 `testdf`，而在 vscode 中，如果当前文件名为 `test.js`，使用 `${TM_FILENAME/(.+)\\.js/$1df/i}`，也能得到同样的结果：
+- 也就是不用逗号分开，而改为 `/`。
+- 在以前 `\.js` 的正则语法中，需要增加一个 `\` 表示再多转义一次，要不然会报错。
+
+
+## 3、多人项目协作时如何实现 snippets 共享？
+
+之前说过，snippets 可以定义在**全局级、项目级、语言级**，所以，如果多人协作时，可以把 snippets 定义在项目级，这样 vscode 在根目录生成配置配置，目录如下： `根目录/.vscode/[snippet名].code-snippets`，可以在这个文件提交到 `git` 仓库中，这样项目成员都可以共享该 `snippets` 了。
+
+## 4、如何在 markdown 文件中使用 vscode snippets?
+
+默认在 `vscode` 中，`markdown` 文件是不支持 snippets 的，比如我平时写一些 `markdown` 表格时，会配置一个 `markdown` 表格的 `snippets`，但发现在 `markdown` 文件中输入触发词 `prefix` 根本无法使用。
+
+```json
+{
+	"md-table": {
+		"prefix": "md-table",
+		"body": [
+			"| 列1标题 | 列2标题 | 列3标题 |",
+			"|---------|---------|---------|",
+			"| 内容A   | 内容B   | 内容C   |",
+			"| 内容D   | 内容E   | 内容F   |"
+		],
+		"description": "markdown 表格"
+	}
+}
+```
+
+后面发现可以手动插入 snippets。在 vscode 按 `ctrl/command + shift + p`，输入 snippets，选择 `Snippets：Insert Snippet`，就可以看到所有之前配置好对的 `snippets` 了，选择对应的 `snippet` 插入即可。
+
+![图片加载失败](../../assets/images/vscode/snippets-3.png)
+
+## 小结
+
+- vscode 支持**全局级（global）**、**项目级（Project）**、语言级（Language）**代码片段，一般个人使用的话为了方便，直接定义 **全局级**即可，需要进行多人协助时，可使用 **项目级** snippets，将生成的配置文件上传到 `git` 仓库即可。
+- snippets 支持语法：光标控制、Variables 变量、Transform 变换等语法，可根据需要进行使用。
+- markdown 中默认不支持 snippets，但可以通过手动插入 snippets 来使用。
+
+
+最后为了方便，snippets 配置文件的编写可以使用这个工具网站进行生成：[snippet-generator](https://snippet-generator.app/?description=&tabtrigger=&snippet=&mode=vscode)
+
+![图片加载失败](../../assets/images/vscode/snippets-4.png)
 
