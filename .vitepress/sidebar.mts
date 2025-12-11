@@ -34,10 +34,13 @@ export default {
     { text: '自定义右键菜单', link: '/note/javascript/js-base/自定义右键菜单' },
     { text: '动态执行Js', link: '/note/javascript/js-base/动态执行Js' },
   ],
-  '/note/typescript': [
-    { text: '1、ts介绍', link: '/note/typescript/1、ts介绍' },
-    { text: '类型推论、类型别名', link: '/note/typescript/类型推论、类型别名' },
+  '/note/interview': [
+    { text: '实现有并行限制的 Promise 调度器', link: '/note/interview/手写篇/实现有并行限制的 Promise 调度器' },
   ],
+  // '/note/typescript': [
+  //   { text: '1、ts介绍', link: '/note/typescript/1、ts介绍' },
+  //   { text: '类型推论、类型别名', link: '/note/typescript/类型推论、类型别名' },
+  // ],
   '/note/css': [
     { text: 'initial、revert、unset的区别', link: '/note/css/initial、revert、unset的区别' },
     { text: 'css知识点', link: '/note/css/css知识点' },

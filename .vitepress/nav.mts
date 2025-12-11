@@ -5,6 +5,12 @@ export default [
     link: '/note/vue/vue2响应式原理'
   },
   {
+    text: '面试篇',
+    items: [
+      { text: '手写篇', link: '/note/interview/手写篇/实现有并行限制的 Promise 调度器' },
+    ]
+  },
+  {
     text: 'JavaScript篇',
     items: [
       { text: 'JavaScript基础篇', link: '/note/javascript/js-base/001' },
@@ -12,13 +18,13 @@ export default [
     ],
     activeMatch: '/note/javascript/'
   },
-  {
-    text: 'TypeScript篇',
-    items: [
-      { text: 'TypeScript基础篇', link: '/note/typescript/1.ts介绍' },
-      { text: 'TypeScript进阶篇', link: '/item-2' },
-    ]
-  },
+  // {
+  //   text: 'TypeScript篇',
+  //   items: [
+  //     { text: 'TypeScript基础篇', link: '/note/typescript/1.ts介绍' },
+  //     { text: 'TypeScript进阶篇', link: '/item-2' },
+  //   ]
+  // },
   {
     text: 'CSS篇',
     items: [
