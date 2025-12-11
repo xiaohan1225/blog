@@ -36,6 +36,7 @@ export default {
   ],
   '/note/interview': [
     { text: '实现有并行限制的 Promise 调度器', link: '/note/interview/手写篇/实现有并行限制的 Promise 调度器' },
+    { text: '手写 Promise', link: '/note/interview/手写篇/手写Promise' },
   ],
   // '/note/typescript': [
   //   { text: '1、ts介绍', link: '/note/typescript/1、ts介绍' },
