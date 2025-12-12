@@ -66,6 +66,8 @@ git config --local user.name xx
 git config --local user.email xxx.com
 ```
 
+可以用 `git config --list` 查看配置信息。
+
 ## git常见问题
 ### 1.github push报错
 在推送代码给`github`仓库的时候，报错：`ssh: connect to host github.com port 22: Connection timed out`；
