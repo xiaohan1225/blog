@@ -1,3 +1,4 @@
 - 获取用户ip: request-ip
 - 录制回放：rrweb
 - 中文手写画板：excalidraw
+- 烟花效果：canvas-confetti
