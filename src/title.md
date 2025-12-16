@@ -1,11 +1,14 @@
 # 记录好的写作标题
-1. CSS动画：animation、transition、transform、translate傻傻分不清
-2. 分不清Boolean和boolean，我被同事diss了
-3. 这10个vue性能优化技巧，藏太深了，建议收藏
-4. CSS之inherit,initial,unset,revert 你真的了解吗？？
-5. 前端换肤的N种方案，请收下
-6. 被鸿蒙吊打的一天
-7. 我和浏览器的斗智斗勇
+- CSS动画：animation、transition、transform、translate傻傻分不清
+- 分不清Boolean和boolean，我被同事diss了
+- 这10个vue性能优化技巧，藏太深了，建议收藏
+- CSS之inherit,initial,unset,revert 你真的了解吗？？
+- 前端换肤的N种方案，请收下
+- 被鸿蒙吊打的一天
+- 我和浏览器的斗智斗勇
+- 认知觉醒：普通人要逆袭，要“扒”三层皮
+- 李笑来：学习复杂系统知识的秘诀，简单的要死，绝大多熟人却终生未知知晓
+- 人民日报：心态好的人，都有着9种习惯，请逼自己养成
 
 ## 有趣的描述
 
