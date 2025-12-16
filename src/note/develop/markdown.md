@@ -71,3 +71,25 @@ githubstars:
 
 
 访问`github`的图片：https://raw.githubusercontent.com/用户名/仓库名/分支名/资源目录/xxx.png
+
+## 文件结构
+
+```bash
+
+monitor/
+├── dist/                # 打包产物
+├── src/                 # 源码目录
+│   ├── index.ts         # 入口文件
+│   ├── errorHandler.ts  # JS 错误捕获
+│   ├── networkMonitor.ts# 网络请求监控
+│   ├── resourceMonitor.ts# 资源加载监控
+│   ├── sender.ts        # 上报逻辑
+│   └── utils.ts         # 工具函数
+├── test/                # 测试靶场
+│   ├── server.js        # 本地测试服务
+│   └── index.html       # 错误触发页面
+├── package.json         # 项目配置
+├── rollup.config.js     # Rollup 打包配置
+├── tsconfig.json        # TypeScript 配置
+└── README.md
+```

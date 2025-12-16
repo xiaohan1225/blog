@@ -34,3 +34,8 @@
 - 打开开发者工具：`⌘ + Option + I`
 - 打开控制台：`⌘ + Option + J（会打开开发者工具，并选中console选项）`
 - 检查元素：`⌘ + Option + C（会打开开发者工具，并选中Elements选项）`
+
+## chrome插件推荐
+- AdBlock：屏蔽网页广告，让页面清爽。
+- Infinity 标签页：管理标签页。
+- Tampermonkey（篡改猴） ：安装和运行自定义脚本，自动化网页操作，大幅提高调试和开发体验。

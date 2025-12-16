@@ -58,6 +58,7 @@ export default [
       { text: '工作心得', link: '/note/work/1.如何封装组件' },
       { text: 'vscode快捷键和插件', link: '/note/vscode/快捷键和插件' },
       { text: 'vscode snippets', link: '/note/vscode/snippets' },
+      { text: '如何编写vscode插件', link: '/note/vscode/如何编写vscode插件' },
     ]
   },
 ]
