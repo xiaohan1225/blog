@@ -33,6 +33,7 @@ export default {
     { text: 'JavaScript冷知识', link: '/note/javascript/js-base/javascript冷知识' },
     { text: '自定义右键菜单', link: '/note/javascript/js-base/自定义右键菜单' },
     { text: '动态执行Js', link: '/note/javascript/js-base/动态执行Js' },
+    { text: '深拷贝和浅拷贝', link: '/note/javascript/js-base/深拷贝和浅拷贝' },
   ],
   '/note/interview': [
     { text: '实现有并行限制的 Promise 调度器', link: '/note/interview/手写篇/实现有并行限制的 Promise 调度器' },
