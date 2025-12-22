@@ -1,6 +1,3 @@
-## 往期回顾
-[前端高频面试题之Vue（初、中级篇）](https://mp.weixin.qq.com/s/HxhldAJpYL7LDLooLDepWA)
-
 
 ## 1、Vue Router 是什么？它解决了什么问题？
 

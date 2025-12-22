@@ -35,6 +35,10 @@ export default {
     { text: '动态执行Js', link: '/note/javascript/js-base/动态执行Js' },
     { text: '深拷贝和浅拷贝', link: '/note/javascript/js-base/深拷贝和浅拷贝' },
   ],
+  '/note/performance': [
+    { text: '页面卡顿', link: '/note/performance/页面卡顿' },
+    { text: 'webpack性能优化', link: '/note/performance/webpack性能优化' },
+  ],
   '/note/interview': [
     { text: '实现有并行限制的 Promise 调度器', link: '/note/interview/手写篇/实现有并行限制的 Promise 调度器' },
     { text: '手写 Promise', link: '/note/interview/手写篇/手写Promise' },
