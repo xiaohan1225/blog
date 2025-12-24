@@ -1,0 +1,1 @@
+import{_ as l,c as a,o as i,ae as t}from"./chunks/framework.Ba8ARF_W.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"money.md","filePath":"money.md"}'),o={name:"money.md"};function r(n,e,x,s,_,d){return i(),a("div",null,[...e[0]||(e[0]=[t("",10)])])}const h=l(o,[["render",r]]);export{f as __pageData,h as default};
