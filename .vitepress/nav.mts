@@ -39,7 +39,7 @@ export default [
     text: '前端工程化篇',
     items: [
       { text: '脚手架篇', link: '/note/engineer/1.cli' },
-      { text: 'npm篇', link: '/item-2' },
+      { text: 'npm篇', link: '/note/engineer/axios架构设计和原理' },
     ]
   },
   {

@@ -45,6 +45,9 @@ export default {
     { text: '手写 Promise', link: '/note/interview/手写篇/手写Promise' },
     { text: '手写Promise相关方法', link: '/note/interview/手写篇/手写Promise相关方法' },
   ],
+  '/note/engineer': [
+    { text: 'axios架构设计和原理', link: '/note/engineer/axios架构设计和原理' },
+  ],
   // '/note/typescript': [
   //   { text: '1、ts介绍', link: '/note/typescript/1、ts介绍' },
   //   { text: '类型推论、类型别名', link: '/note/typescript/类型推论、类型别名' },
