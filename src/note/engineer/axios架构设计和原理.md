@@ -44,7 +44,7 @@ axios.all([axios1, axios2, axios3]).then(axios.spread(function (axios1response, 
 axios.create(config)
 ```
 
-**问题：为什么 axios 既可以当函数调用，也可以当对象使用？**
+**为什么 axios 既可以当函数调用，也可以当对象使用？**
 
 ```js
 function createInstance(defaultConfig) {
