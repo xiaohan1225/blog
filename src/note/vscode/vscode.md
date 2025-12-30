@@ -39,6 +39,14 @@ macOS：`Shift + Option + ↓`
 跳到整个文档的开头 – Command + 上方向键↑
 跳到整个文档的末尾 – Command + 下方向键↓
 
+## 多光标选择
+
+- 使用鼠标：按住 Alt/Option 键并用鼠标左键点击，可以在多个位置添加光标。 
+- 列选择：按住 Ctrl/Command + Alt/Option，然后按向上或向下的箭头键，可以在同一列添加多个光标。 
+- 在每行末尾添加光标：选中一段文字后，按 Shift + Alt/Option + I 可以在每行末尾添加光标。 
+- 选择相同词组：光标放在一个词上，按 Ctrl/Command + Shift + L 或 Ctrl/Command + F2 可以在文档中所有相同词的位置添加光标。 
+
+
 ## 文字选择快捷键
 选中当前位置到本行开头的文字 – Shift + Command + 左方向键←
 选中当前位置到本行末尾的文字 – Shift + Command + 左方向键→
