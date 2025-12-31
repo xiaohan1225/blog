@@ -1,0 +1,1 @@
+import{_ as i,c as e,o as t,ae as a}from"./chunks/framework.Ba8ARF_W.js";const m=JSON.parse('{"title":"记录好的写作标题","description":"","frontmatter":{},"headers":[],"relativePath":"title.md","filePath":"title.md"}'),o={name:"title.md"};function n(r,l,s,d,_,u){return t(),e("div",null,[...l[0]||(l[0]=[a("",5)])])}const S=i(o,[["render",n]]);export{m as __pageData,S as default};
