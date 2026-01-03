@@ -10,6 +10,9 @@
 - 录制回放：rrweb
 - 中文手写画板：excalidraw
 - 烟花效果：canvas-confetti
+- cz-git: 提交时提交信息美化
+- simple-import-sort
+- cspell
 
 - path-to-regexp:转化动态url
 - cli-color 或者 chalk 
