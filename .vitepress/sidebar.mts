@@ -40,6 +40,7 @@ export default {
     { text: 'webpack性能优化', link: '/note/performance/webpack性能优化' },
     { text: '性能瓶颈点', link: '/note/performance/output/性能瓶颈点' },
     { text: '性能指标', link: '/note/performance/output/性能指标' },
+    { text: '性能指标采集', link: '/note/performance/output/性能指标采集' },
   ],
   '/note/interview': [
     { text: '实现有并行限制的 Promise 调度器', link: '/note/interview/手写篇/实现有并行限制的 Promise 调度器' },
