@@ -43,6 +43,12 @@ export default [
     ]
   },
   {
+    text: 'Node.js篇',
+    items: [
+      { text: '手把手教你用koa实现一个登录功能', link: '/note/node/手把手教你用koa实现一个登录功能' },
+    ]
+  },
+  {
     text: '浏览器篇',
     items: [
       { text: '浏览器原理篇', link: '/note/browser/002' },
