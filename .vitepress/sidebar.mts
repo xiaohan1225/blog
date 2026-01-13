@@ -50,6 +50,7 @@ export default {
   ],
   '/note/engineer': [
     { text: 'axios架构设计和原理', link: '/note/engineer/axios架构设计和原理' },
+    { text: '模块化', link: '/note/engineer/模块化' },
   ],
   '/note/node': [
     { text: '手把手教你用koa实现一个登录功能', link: '/note/node/手把手教你用koa实现一个登录功能' },
