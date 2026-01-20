@@ -1,0 +1,1 @@
+import{_ as e,c as t,o,ae as r}from"./chunks/framework.CvsoPZUE.js";const c=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"note/book/1.md","filePath":"note/book/1.md"}'),l={name:"note/book/1.md"};function i(n,a,s,p,d,h){return o(),t("div",null,[...a[0]||(a[0]=[r("",13)])])}const m=e(l,[["render",i]]);export{c as __pageData,m as default};
