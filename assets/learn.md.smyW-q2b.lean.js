@@ -1,1 +1,0 @@
-import{_ as p,c as t,o as a,ae as r}from"./chunks/framework.CvsoPZUE.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"learn.md","filePath":"learn.md"}'),n={name:"learn.md"};function o(_,e,s,i,c,d){return a(),t("div",null,[...e[0]||(e[0]=[r("",11)])])}const f=p(n,[["render",o]]);export{m as __pageData,f as default};

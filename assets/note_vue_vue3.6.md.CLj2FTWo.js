@@ -1,1 +1,0 @@
-import{_ as e,c as t,o as a}from"./chunks/framework.CvsoPZUE.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"note/vue/vue3.6.md","filePath":"note/vue/vue3.6.md"}'),o={name:"note/vue/vue3.6.md"};function n(r,s,c,_,p,u){return a(),t("div")}const m=e(o,[["render",n]]);export{i as __pageData,m as default};

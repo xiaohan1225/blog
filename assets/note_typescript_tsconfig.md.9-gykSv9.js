@@ -1,0 +1,1 @@
+import{_ as t,o as e,c as o}from"./chunks/framework.h0LyDJ8h.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"note/typescript/tsconfig.md","filePath":"note/typescript/tsconfig.md"}'),s={name:"note/typescript/tsconfig.md"};function c(n,r,a,i,p,f){return e(),o("div")}const m=t(s,[["render",c]]);export{d as __pageData,m as default};

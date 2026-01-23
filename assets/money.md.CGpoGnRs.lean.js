@@ -1,0 +1,1 @@
+import{_ as e,o as i,c as a,ae as t}from"./chunks/framework.h0LyDJ8h.js";const f=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"money.md","filePath":"money.md"}'),o={name:"money.md"};function r(n,l,x,s,_,d){return i(),a("div",null,[...l[0]||(l[0]=[t("",11)])])}const h=e(o,[["render",r]]);export{f as __pageData,h as default};
