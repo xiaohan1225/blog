@@ -1,1 +1,0 @@
-import{_ as i,o as a,c as e,ae as t}from"./chunks/framework.BrbCc44R.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"plan.md","filePath":"plan.md"}'),r={name:"plan.md"};function o(n,l,p,s,_,c){return a(),e("div",null,[...l[0]||(l[0]=[t("",13)])])}const u=i(r,[["render",o]]);export{h as __pageData,u as default};
