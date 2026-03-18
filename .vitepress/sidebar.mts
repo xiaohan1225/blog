@@ -36,6 +36,7 @@ export default {
     { text: '深拷贝和浅拷贝', link: '/note/javascript/js-base/深拷贝和浅拷贝' },
     { text: '代码输出题', link: '/note/javascript/js-base/代码输出题' },
     { text: '数组', link: '/note/javascript/js-base/数组' },
+    { text: 'JavaScript如何检测网络状态', link: '/note/javascript/js-base/JavaScript如何检测网络状态' },
   ],
   '/note/performance': [
     { text: '页面卡顿', link: '/note/performance/页面卡顿' },

@@ -17,3 +17,4 @@
 - path-to-regexp:转化动态url
 - cli-color 或者 chalk 
 - verdaccio 搭建npm私服
+- simple-import-sort: 自动排序import语句
