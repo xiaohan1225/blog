@@ -61,6 +61,7 @@ export default {
   ],
   '/note/design_pattern': [
     { text: '单例模式', link: '/note/design_pattern/1.单例模式' },
+    { text: '策略模式', link: '/note/design_pattern/1.策略模式' },
   ],
   // '/note/typescript': [
   //   { text: '1、ts介绍', link: '/note/typescript/1、ts介绍' },

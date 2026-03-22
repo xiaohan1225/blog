@@ -39,6 +39,7 @@ export default [
     text: '设计模式篇',
     items: [
       { text: '单例模式', link: '/note/design_pattern/1.单例模式' },
+      { text: '策略模式', link: '/note/design_pattern/2.策略模式' },
     ]
   },
   {
