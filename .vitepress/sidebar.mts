@@ -59,6 +59,9 @@ export default {
   '/note/node': [
     { text: '手把手教你用koa实现一个登录功能', link: '/note/node/手把手教你用koa实现一个登录功能' },
   ],
+  '/note/design_pattern': [
+    { text: '单例模式', link: '/note/design_pattern/1.单例模式' },
+  ],
   // '/note/typescript': [
   //   { text: '1、ts介绍', link: '/note/typescript/1、ts介绍' },
   //   { text: '类型推论、类型别名', link: '/note/typescript/类型推论、类型别名' },

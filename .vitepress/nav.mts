@@ -36,6 +36,12 @@ export default [
     ]
   },
   {
+    text: '设计模式篇',
+    items: [
+      { text: '单例模式', link: '/note/design_pattern/1.单例模式' },
+    ]
+  },
+  {
     text: '前端工程化篇',
     items: [
       { text: '脚手架篇', link: '/note/engineer/1.cli' },
