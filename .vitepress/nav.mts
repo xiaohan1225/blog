@@ -41,6 +41,7 @@ export default [
       { text: '单例模式', link: '/note/design_pattern/1.单例模式' },
       { text: '策略模式', link: '/note/design_pattern/2.策略模式' },
       { text: '代理模式', link: '/note/design_pattern/3.代理模式' },
+      { text: '发布-订阅模式', link: '/note/design_pattern/4.发布-订阅模式' },
     ]
   },
   {
