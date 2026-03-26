@@ -1,1 +1,0 @@
-import{_ as e,o as i,c as a,ae as t}from"./chunks/framework.Dg21OTSi.js";const c=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"money.md","filePath":"money.md"}'),o={name:"money.md"};function r(n,l,x,s,p,_){return i(),a("div",null,[...l[0]||(l[0]=[t("",13)])])}const f=e(o,[["render",r]]);export{c as __pageData,f as default};
