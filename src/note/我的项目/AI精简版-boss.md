@@ -1,6 +1,6 @@
 ## 个人优势
 1. 扎实掌握 HTML、CSS、JavaScript、ES6+、TypeScript 等前端基础，熟悉常见数据结构、算法与设计模式。
-2. 熟练掌握 Vue 生态及源码，具备 PC 端、H5、Hybrid、微信小程序、Uni-app 等多端项目经验，并可协同 Vue / React 混合技术栈开发。
+2. 精通 Vue 生态及源码，具备 PC 端、H5、Hybrid、微信小程序、Uni-app 等多端项目经验，并可协同 Vue / React 混合技术栈开发，且具有全栈开发经验。
 3. 熟悉 Webpack、Vite、Rollup、Babel、Node.js、Egg.js、Next.js 等技术，具备 SSR、性能优化、组件化与工程化落地经验。
 4. 擅长使用 Cursor、Claude Code、Codex 等 AI 开发工具进行工程化协作，能够结合 Plan、Skills 等能力沉淀高效研发协作范式，提升开发效率与工程落地质量。
 5. 具备团队级 AI 研发提效实践经验，搭建覆盖需求拆解、编码实现、测试验证到 Code Review 的 AI 辅助工作流，显著提升团队整体交付效率。

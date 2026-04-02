@@ -44,6 +44,8 @@ export default [
       { text: '发布-订阅模式', link: '/note/design_pattern/4.发布-订阅模式' },
       { text: '装饰者模式', link: '/note/design_pattern/5.装饰者模式' },
       { text: '职责链模式', link: '/note/design_pattern/6.职责链模式' },
+      { text: '迭代器模式', link: '/note/design_pattern/7.迭代器模式' },
+      { text: '命令模式', link: '/note/design_pattern/8.命令模式' },
     ]
   },
   {
