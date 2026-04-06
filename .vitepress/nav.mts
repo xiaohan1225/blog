@@ -46,6 +46,7 @@ export default [
       { text: '职责链模式', link: '/note/design_pattern/6.职责链模式' },
       { text: '迭代器模式', link: '/note/design_pattern/7.迭代器模式' },
       { text: '命令模式', link: '/note/design_pattern/8.命令模式' },
+      { text: '工厂模式', link: '/note/design_pattern/9.工厂模式' },
     ]
   },
   {
