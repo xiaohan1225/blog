@@ -60,8 +60,16 @@ export default {
     { text: '手把手教你用koa实现一个登录功能', link: '/note/node/手把手教你用koa实现一个登录功能' },
   ],
   '/note/design_pattern': [
-    { text: '单例模式', link: '/note/design_pattern/1.单例模式' },
-    { text: '策略模式', link: '/note/design_pattern/1.策略模式' },
+    { text: '1.单例模式', link: '/note/design_pattern/1.单例模式' },
+    { text: '2.策略模式', link: '/note/design_pattern/2.策略模式' },
+    { text: '3.代理模式', link: '/note/design_pattern/3.代理模式' },
+    { text: '4.发布-订阅模式', link: '/note/design_pattern/4.发布-订阅模式' },
+    { text: '5.装饰者模式', link: '/note/design_pattern/5.装饰者模式' },
+    { text: '6.职责链模式', link: '/note/design_pattern/6.职责链模式' },
+    { text: '7.迭代器模式', link: '/note/design_pattern/7.迭代器模式' },
+    { text: '8.命令模式', link: '/note/design_pattern/8.命令模式' },
+    { text: '9.工厂模式', link: '/note/design_pattern/9.工厂模式' },
+    { text: '10.模板方法模式', link: '/note/design_pattern/10.模板方法模式' },
   ],
   // '/note/typescript': [
   //   { text: '1、ts介绍', link: '/note/typescript/1、ts介绍' },
