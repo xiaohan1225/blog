@@ -6,7 +6,7 @@
 
 直接瞎编一个股价（幻觉）。
 或者只查股价，忘记做计算。
-我们需要教它分步思考。这就是 ReAct (Reasoning + Acting) 模式。
+我们需要教它分步思考。这就是 ReAct (Reasoning + Acting) 模式。也就是 Reasoning（想）+ Acting（做），加上 Observation（看结果）。
 
 ReAct 的核心流程：
 - Thought（思考）：模型先自言自语：“我需要先查特斯拉当前股价，再查一个月前的股价，然后计算收益率。”
