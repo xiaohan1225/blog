@@ -1,0 +1,293 @@
+---
+name: technical-blog-writing
+description: "面向开发者的技术博客写作技能，包含文章结构、代码示例和开发者读者习惯。覆盖文章类型、代码格式、解释深度，以及面向开发者的表达方式。适用于：工程博客、开发教程、技术写作、开发者内容、文档型文章。触发词：技术博客、开发博客、工程博客、技术写作、开发者教程、技术文章、代码教程、编程博客、开发者内容、工程文章、技术内容"
+allowed-tools: Bash(belt *)
+---
+
+# 技术博客写作
+
+通过 [inference.sh](https://inference.sh) CLI 编写面向开发者的技术博客文章。
+
+## 快速开始
+
+> 需要 inference.sh CLI（`belt`）。[安装说明](https://raw.githubusercontent.com/inference-sh/skills/refs/heads/main/cli-install.md)
+
+```bash
+belt login
+
+# 调研主题深度
+belt app run exa/search --input '{
+  "query": "building REST API Node.js best practices 2024 tutorial"
+}'
+
+# 生成文章头图
+belt app run infsh/html-to-image --input '{
+  "html": "<div style=\"width:1200px;height:630px;background:linear-gradient(135deg,#0f172a,#1e293b);display:flex;align-items:center;padding:60px;font-family:ui-monospace,monospace;color:white\"><div><p style=\"font-size:18px;color:#38bdf8;margin:0\">// engineering blog</p><h1 style=\"font-size:48px;margin:16px 0;font-weight:800;font-family:system-ui;line-height:1.2\">How We Reduced API Latency by 90% with Edge Caching</h1><p style=\"font-size:20px;opacity:0.6;font-family:system-ui\">A deep dive into our CDN architecture</p></div></div>"
+}'
+```
+
+## 文章类型
+
+### 1. 教程 / How-To
+
+一步一步讲清楚操作过程。读者应该能够跟着文章完成并构建出某个东西。
+
+```
+结构：
+1. 我们要构建什么（附截图/演示）
+2. 前置条件
+3. 第 1 步：环境搭建
+4. 第 2 步：核心实现
+5. 第 3 步：……
+6. 完整代码（GitHub 链接）
+7. 下一步 / 扩展方向
+```
+
+| 规则 | 原因 |
+|------|------|
+| 先展示最终效果 | 读者知道这篇文章是否值得继续读 |
+| 明确列出前置条件 | 不浪费不匹配读者的时间 |
+| 每个代码块都应该可运行 | 复制、粘贴、运行就是检验标准 |
+| 解释“为什么”，不只解释“怎么做” | 能讲清推理过程的教程更容易被传播 |
+| 包含错误处理 | 真实代码一定会处理错误 |
+| 链接到完整代码仓库 | 方便读者在教程之后查阅 |
+
+### 2. 深入解析 / 解释型文章
+
+深入解释一个概念、技术或架构决策。
+
+```
+结构：
+1. 什么是 [概念]，为什么你应该关心它？
+2. 它如何工作（简化心智模型）
+3. 它如何工作（详细机制）
+4. 真实案例
+5. 取舍，以及什么时候不该用它
+6. 延伸阅读
+```
+
+### 3. 事故复盘 / Incident Report
+
+描述出了什么问题、为什么出问题，以及最终如何修复。
+
+```
+结构：
+1. 摘要（发生了什么、影响范围、持续时间）
+2. 事件时间线
+3. 根因分析
+4. 已实施的修复方案
+5. 为防止复发正在做什么
+6. 经验教训
+```
+
+### 4. 基准测试 / 对比
+
+用数据驱动去比较工具、方案或架构。
+
+```
+结构：
+1. 我们比较了什么，以及为什么比较
+2. 方法论（让结果可复现）
+3. 用图表展示结果
+4. 分析（数字意味着什么）
+5. 建议（附带限制条件）
+6. 原始数据 / 复现说明
+```
+
+### 5. 架构 / 系统设计
+
+解释一个系统是如何构建的，以及为什么做出这些决策。
+
+```
+结构：
+1. 我们需要解决的问题
+2. 约束和需求
+3. 考虑过的选项
+4. 选定的架构（附图）
+5. 我们接受的取舍
+6. 结果和经验
+```
+
+## 面向开发者的写作规则
+
+### 表达风格和语气
+
+| 应该这样写 | 不要这样写 |
+|------------|------------|
+| 直接表达：“使用连接池” | “你可能想考虑使用……” |
+| 承认取舍：“这会增加复杂度” | 假装你的方案完美无缺 |
+| 团队决策使用“我们” | “我单枪匹马设计了……” |
+| 给出具体数字：“p99 从 800ms 降到 90ms” | “性能显著提升” |
+| 引用来源和基准测试 | 做没有来源的断言 |
+| 承认替代方案 | 假装你的方案是唯一选择 |
+
+### 开发者讨厌什么
+
+```
+❌ “在当今快节奏的技术世界里……”（废话）
+❌ “众所周知……”（如果人人都知道，为什么还要写？）
+❌ “只需要做 X” （如果读者在看教程，事情通常并不简单）
+❌ “这很容易……”（轻视读者的实际体验）
+❌ “显然……”（如果显然，就不用写）
+❌ 技术内容里塞营销话术
+❌ 把核心结论埋在 3 段背景之后
+```
+
+### 代码示例
+
+| 规则 | 原因 |
+|------|------|
+| 每个代码块都必须可运行 | 跑不起来的示例会摧毁信任 |
+| 展示完整、可工作的示例 | 没有上下文的代码片段用处很小 |
+| fenced code block 要标注语言 | 便于语法高亮 |
+| 代码后展示输出/结果 | 帮助读者验证理解 |
+| 使用真实的变量名 | 用 `calculateTotalRevenue`，不要用 `foo` |
+| 示例中包含错误处理 | 真实代码会处理错误 |
+| 固定依赖版本 | 写“适用于 React 18.2”，不要只写“React” |
+
+好的代码块格式：
+
+```python
+# 这段代码做什么（一行说明）
+def calculate_retry_delay(attempt: int, base_delay: float = 1.0) -> float:
+    """Exponential backoff with jitter."""
+    delay = base_delay * (2 ** attempt)
+    jitter = random.uniform(0, delay * 0.1)
+    return delay + jitter
+
+# 用法
+delay = calculate_retry_delay(attempt=3)  # 约 8.0-8.8 秒
+```
+
+### 解释深度
+
+| 读者信号 | 深度 |
+|----------|------|
+| “X 入门” | 什么都解释，假设读者没有前置知识 |
+| “X 高级模式” | 跳过基础，深入细节和边界 |
+| “X vs Y” | 假设读者熟悉两者，重点讲差异 |
+| “我们如何构建 X” | 面向技术读者，可以跳过基本概念 |
+
+**在开头明确说明你假设的读者水平**：
+
+```
+“本文假设你熟悉 Docker 和 Kubernetes 的基本概念。
+如果你刚接触容器，请先阅读 [我们的入门文章]。”
+```
+
+## 博客文章结构
+
+### 理想结构
+
+```markdown
+# 标题（包含主关键词，并说明结果）
+
+[头图或图示]
+
+**TL;DR：** [2-3 句话总结，包含关键结论]
+
+## 问题 / 为什么这件事重要
+[说明读者为什么应该关心，要具体，不要泛泛而谈]
+
+## 解决方案 / 我们是怎么做的
+[核心内容：代码、架构、解释]
+
+### 第 1 步：[第一件事]
+[解释 + 代码 + 输出]
+
+### 第 2 步：[第二件事]
+[解释 + 代码 + 输出]
+
+## 结果
+[数字、基准测试、产出，要具体]
+
+## 取舍和限制
+[诚实说明缺点，这会建立信任]
+
+## 结论
+[关键结论 + 下一步做什么]
+
+## 延伸阅读
+[3-5 个相关链接]
+```
+
+### 不同类型的字数建议
+
+| 类型 | 字数 | 原因 |
+|------|------|------|
+| 快速技巧 | 500-800 | 一个概念，一个示例 |
+| 教程 | 1,500-3,000 | 分步骤内容需要细节 |
+| 深入解析 | 2,000-4,000 | 需要完整展开 |
+| 架构文章 | 2,000-3,500 | 图示会承担一部分表达 |
+| 基准测试 | 1,500-2,500 | 数据和图表承担主要信息量 |
+
+## 图表和视觉内容
+
+### 什么时候使用图表
+
+| 场景 | 图表类型 |
+|------|----------|
+| 请求流程 | 时序图 |
+| 系统架构 | 方框箭头图 |
+| 决策逻辑 | 流程图 |
+| 数据模型 | ER 图 |
+| 性能对比 | 柱状图/折线图 |
+| 前后对比 | 并排对比 |
+
+```bash
+# 生成架构图
+belt app run infsh/html-to-image --input '{
+  "html": "<div style=\"width:1200px;height:600px;background:#0f172a;display:flex;align-items:center;justify-content:center;padding:40px;font-family:system-ui;color:white\"><div style=\"display:flex;gap:40px;align-items:center\"><div style=\"background:#1e293b;border:2px solid #334155;border-radius:8px;padding:24px;text-align:center;width:160px\"><p style=\"font-size:14px;color:#94a3b8;margin:0\">Client</p><p style=\"font-size:18px;font-weight:bold;margin:8px 0 0\">React App</p></div><div style=\"color:#64748b;font-size:32px\">→</div><div style=\"background:#1e293b;border:2px solid #3b82f6;border-radius:8px;padding:24px;text-align:center;width:160px\"><p style=\"font-size:14px;color:#94a3b8;margin:0\">Edge</p><p style=\"font-size:18px;font-weight:bold;margin:8px 0 0\">CDN Cache</p></div><div style=\"color:#64748b;font-size:32px\">→</div><div style=\"background:#1e293b;border:2px solid #334155;border-radius:8px;padding:24px;text-align:center;width:160px\"><p style=\"font-size:14px;color:#94a3b8;margin:0\">API</p><p style=\"font-size:18px;font-weight:bold;margin:8px 0 0\">Node.js</p></div><div style=\"color:#64748b;font-size:32px\">→</div><div style=\"background:#1e293b;border:2px solid #334155;border-radius:8px;padding:24px;text-align:center;width:160px\"><p style=\"font-size:14px;color:#94a3b8;margin:0\">Database</p><p style=\"font-size:18px;font-weight:bold;margin:8px 0 0\">PostgreSQL</p></div></div></div>"
+}'
+
+# 生成基准测试图表
+belt app run infsh/python-executor --input '{
+  "code": "import matplotlib.pyplot as plt\nimport matplotlib\nmatplotlib.use(\"Agg\")\n\nfig, ax = plt.subplots(figsize=(12, 6))\nfig.patch.set_facecolor(\"#0f172a\")\nax.set_facecolor(\"#0f172a\")\n\ntools = [\"Express\", \"Fastify\", \"Hono\", \"Elysia\"]\nrps = [15000, 45000, 62000, 78000]\ncolors = [\"#64748b\", \"#64748b\", \"#3b82f6\", \"#64748b\"]\n\nax.barh(tools, rps, color=colors, height=0.5)\nfor i, v in enumerate(rps):\n    ax.text(v + 1000, i, f\"{v:,} req/s\", va=\"center\", color=\"white\", fontsize=14)\n\nax.set_xlabel(\"Requests per second\", color=\"white\", fontsize=14)\nax.set_title(\"HTTP Framework Benchmark (Hello World)\", color=\"white\", fontsize=18, fontweight=\"bold\")\nax.tick_params(colors=\"white\", labelsize=12)\nax.spines[\"top\"].set_visible(False)\nax.spines[\"right\"].set_visible(False)\nax.spines[\"bottom\"].set_color(\"#334155\")\nax.spines[\"left\"].set_color(\"#334155\")\nplt.tight_layout()\nplt.savefig(\"benchmark.png\", dpi=150, facecolor=\"#0f172a\")\nprint(\"Saved\")"
+}'
+```
+
+## 分发
+
+### 开发者在哪里阅读
+
+| 平台 | 格式 | 发布方式 |
+|------|------|----------|
+| 你的博客 | 完整文章 | 主阵地，拥有自己的内容 |
+| Dev.to | 交叉发布（canonical URL 指回你的站点） | Markdown 导入 |
+| Hashnode | 交叉发布（canonical URL） | Markdown 导入 |
+| Hacker News | 链接提交 | 项目用 Show HN，故事/经验用 Tell HN |
+| Reddit（r/programming、r/webdev 等） | 链接或讨论 | 遵守 subreddit 规则 |
+| Twitter/X | 线程摘要 + 链接 | 参见 twitter-thread-creation skill |
+| LinkedIn | 改写版本 + 链接 | 参见 linkedin-content skill |
+
+```bash
+# 将文章摘要线程交叉发布到 X
+belt app run x/post-create --input '{
+  "text": "New blog post: How We Reduced API Latency by 90%\n\nThe short version:\n→ Moved computation to edge\n→ Aggressive cache-control headers\n→ Eliminated N+1 queries\n\np99 went from 800ms to 90ms.\n\nFull deep dive with code: [link]"
+}'
+```
+
+## 常见错误
+
+| 错误 | 问题 | 修正 |
+|------|------|------|
+| 没有 TL;DR | 忙碌的开发者还没看到重点就离开了 | 在顶部放 2-3 句话总结 |
+| 代码示例跑不起来 | 摧毁所有可信度 | 发布前测试每个代码块 |
+| 没有固定版本 | 6 个月后代码可能失效 | 写“适用于 Node 20、React 18.2” |
+| “只需要做 X” | 显得轻视、居高临下 | 删除“只需”“简单”“轻松”等词 |
+| 架构文章没有图 | 用大段文字描述系统很难读 | 一张图胜过 500 字说明 |
+| 营销语气 | 开发者会立刻失去兴趣 | 直接、技术化、诚实 |
+| 没有取舍部分 | 读起来像有偏见的营销文 | 永远讨论缺点 |
+| 内容前面塞了很长引言 | 读者会跳出 | 2-3 段内进入重点 |
+| 依赖没有固定版本 | 教程会让未来读者跑不通 | 固定版本，并注明写作日期 |
+| 没有“延伸阅读” | 文章成了死胡同，缺少上下文 | 给出 3-5 个链接帮助深入理解 |
+
+## 相关 Skills
+
+```bash
+npx skills add inference-sh/skills@seo-content-brief
+npx skills add inference-sh/skills@content-repurposing
+npx skills add inference-sh/skills@og-image-design
+```
+
+浏览所有 app：`belt app list`
