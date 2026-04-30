@@ -1,0 +1,10 @@
+sequenceDiagram
+    participant U as 用户
+    participant M as 大模型
+    participant T as 工具
+    U->>M: 帮我整理某行业竞品报告
+    M->>T: 搜索资料
+    T-->>M: 返回网页和文档
+    M->>T: 提取关键数据
+    T-->>M: 返回结构化信息
+    M-->>U: 输出报告、表格和结论

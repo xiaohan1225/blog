@@ -1,0 +1,12 @@
+flowchart TD
+    A[我该用哪个模型？] --> B{主要用途}
+    B -->|聊天写作| C[选体验好的通用模型]
+    B -->|读长资料| D[选长上下文强的模型]
+    B -->|写代码| E[选编程/Agent 强的模型]
+    B -->|图片音视频| F[选多模态模型]
+    B -->|公司内部用| G[看私有化、成本、合规]
+    C --> H[先试 ChatGPT / Claude / Gemini / 豆包 / Kimi]
+    D --> I[先试 Claude / Kimi / Gemini / DeepSeek]
+    E --> J[先试 GPT / Claude / DeepSeek / Qwen / GLM]
+    F --> K[先试 Gemini / 豆包 / MiniMax / Qwen]
+    G --> L[先看 Llama / Mistral / DeepSeek / Qwen / GLM]

@@ -71,6 +71,9 @@ export default {
     { text: '9.工厂模式', link: '/note/design_pattern/9.工厂模式' },
     { text: '10.模板方法模式', link: '/note/design_pattern/10.模板方法模式' },
   ],
+  '/note/ai': [
+    { text: '大模型介绍', link: '/note/ai/agent/output/大模型科普-审校.md' },
+  ],
   // '/note/typescript': [
   //   { text: '1、ts介绍', link: '/note/typescript/1、ts介绍' },
   //   { text: '类型推论、类型别名', link: '/note/typescript/类型推论、类型别名' },
