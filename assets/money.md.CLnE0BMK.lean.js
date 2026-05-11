@@ -1,0 +1,1 @@
+import{_ as i,o as a,c as e,ae as t}from"./chunks/framework.B2m0-DLt.js";const h=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"money.md","filePath":"money.md"}'),r={name:"money.md"};function o(u,l,n,p,s,_){return a(),e("div",null,[...l[0]||(l[0]=[t("",15)])])}const c=i(r,[["render",o]]);export{h as __pageData,c as default};
