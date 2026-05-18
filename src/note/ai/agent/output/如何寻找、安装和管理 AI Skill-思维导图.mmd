@@ -1,0 +1,51 @@
+mindmap
+  root((AI Skill 管理))
+    先明确需求
+      稳定复用哪类经验
+      一次性任务还是长期工作流
+      知识流程还是工具调用
+      关键词越具体越好
+    去哪里找
+      Anthropic 官方目录
+      skills.sh
+      AgentSkill.sh
+      SkillsMP
+      SkillHub
+      腾讯 SkillHub
+      字节生态
+      先看原仓库和 SKILL.md
+    判断是否优质
+      来源可信
+        官方或知名组织
+        仓库活跃有维护
+        多人验证
+      主文件可执行
+        description 边界清楚
+        有步骤和输出标准
+        资源目录拆分合理
+      内容长度合适
+        单一流程 500 到 1500 字
+        复杂流程 1500 到 3000 字
+        太短像口号
+        太长占上下文
+      关键节点确认
+        开始前确认目标
+        方案选择要确认
+        修改删除联网前确认
+    安装前检查
+      是否读取敏感目录
+      scripts 是否可信
+      是否修改系统或上传数据
+      是否和已有 Skill 重叠
+    安装和维护
+      npx skills add
+      GitHub 仓库安装
+      手动复制目录
+      npx skills update
+      npx skills remove
+      重启工具后生效
+    管理冲突
+      不要堆太多相似 Skill
+      合并高度重叠项
+      给每个 Skill 明确边界
+      用具体 name 和 description

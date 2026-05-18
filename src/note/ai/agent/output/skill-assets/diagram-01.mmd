@@ -1,0 +1,11 @@
+flowchart TD
+    A[用户提出任务] --> B[AI 读取可用 Skill 的元信息]
+    B --> C{是否匹配任务}
+    C -->|不匹配| D[按普通方式处理]
+    C -->|匹配| E[加载对应 SKILL.md]
+    E --> F[读取执行流程和约束]
+    F --> G{是否需要额外资源}
+    G -->|需要| H[读取 references/scripts/assets]
+    G -->|不需要| I[直接执行任务]
+    H --> I[按 Skill 流程执行任务]
+    I --> J[输出结果]

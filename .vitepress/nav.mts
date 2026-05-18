@@ -61,6 +61,8 @@ export default [
     text: 'AI篇',
     items: [
       { text: '大模型介绍', link: '/note/ai/agent/output/大模型科普-审校.md' },
+      { text: 'skill', link: '/note/ai/agent/output/AI Skill 是什么.md' },
+      { text: '如何寻找、安装和管理 AI Skill', link: '/note/ai/agent/output/如何寻找、安装和管理 AI Skill.md' },
     ]
   },
   {
