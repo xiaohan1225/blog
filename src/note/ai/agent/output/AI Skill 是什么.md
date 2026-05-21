@@ -93,7 +93,7 @@ AI 先看 Skill 的元信息，判断是否相关；相关时再读取正文和�
 
 一个简化流程如下：
 
-![Mermaid 图 1](./skill-assets/diagram-01.png)
+![Mermaid 图 1](./assets/skill工作流程.png)
 
 这里有一个关键点：Skill 应该渐进式加载。
 
