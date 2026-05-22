@@ -1,0 +1,1 @@
+import{_ as i,H as a,f as e,i as o}from"./chunks/framework.BGnj2dTC.js";const u=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"idea.md","filePath":"idea.md"}'),t={name:"idea.md"};function r(p,l,n,d,h,s){return a(),e("div",null,[...l[0]||(l[0]=[o("",40)])])}const m=i(t,[["render",r]]);export{u as __pageData,m as default};

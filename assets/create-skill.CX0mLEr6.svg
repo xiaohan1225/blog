@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2200" height="1650" viewBox="0 0 2200 1650">
+  <defs>
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="5" cy="5" r="1.7" fill="#d7dce5" opacity="0.7"/>
+    </pattern>
+    <filter id="softShadow" x="-15%" y="-25%" width="130%" height="160%">
+      <feDropShadow dx="0" dy="5" stdDeviation="5" flood-color="#c7ceda" flood-opacity="0.42"/>
+    </filter>
+    <style>
+      .bg { fill: #ffffff; }
+      .center { fill: #101828; filter: url(#softShadow); }
+      .topic { rx: 10; filter: url(#softShadow); }
+      .sub { rx: 10; fill: #eef1f7; filter: url(#softShadow); }
+      .centerText { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 42px; font-weight: 850; fill: #ffffff; }
+      .topicText { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 30px; font-weight: 760; fill: #ffffff; }
+      .subText { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 26px; fill: #111827; }
+      .smallText { font-family: "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif; font-size: 24px; fill: #111827; }
+      .line { fill: none; stroke-linecap: round; stroke-width: 8; }
+      .thin { fill: none; stroke-linecap: round; stroke-width: 4; }
+    </style>
+  </defs>
+
+  <rect class="bg" width="2200" height="1650"/>
+  <rect width="2200" height="1650" fill="url(#dots)"/>
+
+  <!-- center -->
+  <rect class="center" x="92" y="742" width="430" height="128" rx="14"/>
+  <text class="centerText" x="307" y="790" text-anchor="middle">手写一个</text>
+  <text class="centerText" x="307" y="842" text-anchor="middle">AI Skill</text>
+
+  <!-- main branches -->
+  <path class="line" d="M522 795 C610 200, 640 120, 720 120" stroke="#5b83c7"/>
+  <path class="line" d="M522 805 C610 350, 640 345, 720 345" stroke="#f28c2d"/>
+  <path class="line" d="M522 813 C610 590, 640 590, 720 590" stroke="#ef4444"/>
+  <path class="line" d="M522 822 C610 930, 640 930, 720 930" stroke="#10b981"/>
+  <path class="line" d="M522 831 C610 1190, 640 1200, 720 1200" stroke="#7c3aed"/>
+  <path class="line" d="M522 840 C610 1460, 640 1510, 720 1510" stroke="#3b9edb"/>
+
+  <!-- branch 1 -->
+  <rect class="topic" x="720" y="82" width="230" height="76" fill="#5b83c7"/>
+  <text class="topicText" x="835" y="131" text-anchor="middle">Skill 是什么</text>
+  <path class="thin" d="M950 120 C1005 120, 1030 66, 1070 66" stroke="#5b83c7"/>
+  <path class="thin" d="M950 120 C1005 120, 1030 138, 1070 138" stroke="#5b83c7"/>
+  <path class="thin" d="M950 120 C1005 120, 1030 212, 1070 212" stroke="#5b83c7"/>
+  <rect class="sub" x="1070" y="38" width="520" height="56"/>
+  <text class="smallText" x="1092" y="74">AI 的专业能力模块，不是临时 prompt</text>
+  <rect class="sub" x="1070" y="110" width="580" height="56"/>
+  <text class="smallText" x="1092" y="146">把经验、规则、流程、注意事项封装起来</text>
+  <rect class="sub" x="1070" y="184" width="610" height="56"/>
+  <text class="smallText" x="1092" y="220">适合稳定、重复、可沉淀的高频任务</text>
+
+  <!-- branch 2 -->
+  <rect class="topic" x="720" y="307" width="230" height="76" fill="#f28c2d"/>
+  <text class="topicText" x="835" y="356" text-anchor="middle">最小结构</text>
+  <path class="thin" d="M950 345 C1005 345, 1030 302, 1070 302" stroke="#f28c2d"/>
+  <path class="thin" d="M950 345 C1005 345, 1030 374, 1070 374" stroke="#f28c2d"/>
+  <path class="thin" d="M950 345 C1005 345, 1030 448, 1070 448" stroke="#f28c2d"/>
+  <rect class="sub" x="1070" y="274" width="470" height="56"/>
+  <text class="smallText" x="1092" y="310">最小可用版只需要 SKILL.md</text>
+  <rect class="sub" x="1070" y="346" width="630" height="56"/>
+  <text class="smallText" x="1092" y="382">复杂任务再拆 scripts / references / assets</text>
+  <rect class="sub" x="1070" y="420" width="610" height="56"/>
+  <text class="smallText" x="1092" y="456">先让它能触发、能完成任务，再补资源</text>
+
+  <!-- branch 3 -->
+  <rect class="topic" x="720" y="552" width="230" height="76" fill="#ef4444"/>
+  <text class="topicText" x="835" y="601" text-anchor="middle">手写步骤</text>
+  <path class="thin" d="M950 590 C1005 590, 1030 535, 1070 535" stroke="#ef4444"/>
+  <path class="thin" d="M950 590 C1005 590, 1030 608, 1070 608" stroke="#ef4444"/>
+  <path class="thin" d="M950 590 C1005 590, 1030 682, 1070 682" stroke="#ef4444"/>
+  <path class="thin" d="M950 590 C1005 590, 1030 756, 1070 756" stroke="#ef4444"/>
+  <rect class="sub" x="1070" y="507" width="560" height="56"/>
+  <text class="smallText" x="1092" y="543">先确定边界：别写万能写作 Skill</text>
+  <rect class="sub" x="1070" y="580" width="640" height="56"/>
+  <text class="smallText" x="1092" y="616">放到 Agent 能识别的 skills 目录</text>
+  <rect class="sub" x="1070" y="654" width="660" height="56"/>
+  <text class="smallText" x="1092" y="690">写好 name 和 description，触发条件放前面</text>
+  <rect class="sub" x="1070" y="728" width="610" height="56"/>
+  <text class="smallText" x="1092" y="764">把理念拆成可执行步骤、结构和禁区</text>
+
+  <!-- branch 4 -->
+  <rect class="topic" x="720" y="892" width="260" height="76" fill="#10b981"/>
+  <text class="topicText" x="850" y="941" text-anchor="middle">测试与拆分</text>
+  <path class="thin" d="M980 930 C1030 930, 1050 870, 1090 870" stroke="#10b981"/>
+  <path class="thin" d="M980 930 C1030 930, 1050 945, 1090 945" stroke="#10b981"/>
+  <path class="thin" d="M980 930 C1030 930, 1050 1020, 1090 1020" stroke="#10b981"/>
+  <rect class="sub" x="1090" y="842" width="580" height="56"/>
+  <text class="smallText" x="1112" y="878">用真实提示词测试是否触发、是否乱编</text>
+  <rect class="sub" x="1090" y="917" width="610" height="56"/>
+  <text class="smallText" x="1112" y="953">不触发先改 description，输出不稳改正文</text>
+  <rect class="sub" x="1090" y="992" width="650" height="56"/>
+  <text class="smallText" x="1112" y="1028">脚本管稳定操作，参考资料管长规则和知识</text>
+
+  <!-- branch 5 -->
+  <rect class="topic" x="720" y="1162" width="230" height="76" fill="#7c3aed"/>
+  <text class="topicText" x="835" y="1211" text-anchor="middle">常见坑</text>
+  <path class="thin" d="M950 1200 C1005 1200, 1030 1138, 1070 1138" stroke="#7c3aed"/>
+  <path class="thin" d="M950 1200 C1005 1200, 1030 1212, 1070 1212" stroke="#7c3aed"/>
+  <path class="thin" d="M950 1200 C1005 1200, 1030 1286, 1070 1286" stroke="#7c3aed"/>
+  <rect class="sub" x="1070" y="1110" width="540" height="56"/>
+  <text class="smallText" x="1092" y="1146">description 太宽或太短，都会影响触发</text>
+  <rect class="sub" x="1070" y="1184" width="580" height="56"/>
+  <text class="smallText" x="1092" y="1220">只写原则不写步骤，模型很难稳定执行</text>
+  <rect class="sub" x="1070" y="1258" width="620" height="56"/>
+  <text class="smallText" x="1092" y="1294">没有反例和禁区，就容易编数据、写口号</text>
+
+  <!-- branch 6 -->
+  <rect class="topic" x="720" y="1472" width="270" height="76" fill="#3b9edb"/>
+  <text class="topicText" x="855" y="1521" text-anchor="middle">skill-creator</text>
+  <path class="thin" d="M990 1510 C1045 1510, 1070 1412, 1110 1412" stroke="#3b9edb"/>
+  <path class="thin" d="M990 1510 C1045 1510, 1070 1486, 1110 1486" stroke="#3b9edb"/>
+  <path class="thin" d="M990 1510 C1045 1510, 1070 1560, 1110 1560" stroke="#3b9edb"/>
+  <rect class="sub" x="1110" y="1384" width="610" height="56"/>
+  <text class="smallText" x="1132" y="1420">帮你处理目录结构、FrontMatter 和资源拆分</text>
+  <rect class="sub" x="1110" y="1458" width="590" height="56"/>
+  <text class="smallText" x="1132" y="1494">适合正式创建、长期复用和持续迭代</text>
+  <rect class="sub" x="1110" y="1532" width="650" height="56"/>
+  <text class="smallText" x="1132" y="1568">先手写理解原理，再用它检查和完善结构</text>
+</svg>

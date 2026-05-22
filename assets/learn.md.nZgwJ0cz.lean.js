@@ -1,0 +1,1 @@
+import{_ as p,H as t,f as a,i as r}from"./chunks/framework.BGnj2dTC.js";const m=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"learn.md","filePath":"learn.md"}'),n={name:"learn.md"};function o(_,e,s,i,c,d){return t(),a("div",null,[...e[0]||(e[0]=[r("",11)])])}const f=p(n,[["render",o]]);export{m as __pageData,f as default};
