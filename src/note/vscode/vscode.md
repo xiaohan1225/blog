@@ -26,6 +26,7 @@
 - `Ctrl + Shift + D` 打开调试面板(windows？)
 - `Ctrl/Command + Shift + X` 打开扩展面板
 - `Ctrl/Command + B` 打开/关闭左边侧边栏
+- `Cmd/Ctrl + J`（切换面板显示）
 
 ## 复制一行
 操作系统快捷键Windows / Linux：`Shift + Alt + ↓`
