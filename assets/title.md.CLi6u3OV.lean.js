@@ -1,1 +1,0 @@
-import{_ as l,H as e,f as t,i as a}from"./chunks/framework.BGnj2dTC.js";const m=JSON.parse('{"title":"记录好的写作标题","description":"","frontmatter":{},"headers":[],"relativePath":"title.md","filePath":"title.md"}'),o={name:"title.md"};function n(r,i,s,d,_,u){return e(),t("div",null,[...i[0]||(i[0]=[a("",5)])])}const S=l(o,[["render",n]]);export{m as __pageData,S as default};

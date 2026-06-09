@@ -1,0 +1,1 @@
+import{_ as i,o as a,c as e,ae as t}from"./chunks/framework.DICTGE3h.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"money.md","filePath":"money.md"}'),o={name:"money.md"};function r(u,l,n,p,h,s){return a(),e("div",null,[...l[0]||(l[0]=[t("",21)])])}const c=i(o,[["render",r]]);export{d as __pageData,c as default};

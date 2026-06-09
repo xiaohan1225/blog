@@ -1,1 +1,0 @@
-import{_ as e,H as t,f as a}from"./chunks/framework.BGnj2dTC.js";const i=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"note/vue/vue3.6.md","filePath":"note/vue/vue3.6.md"}'),o={name:"note/vue/vue3.6.md"};function n(r,s,c,_,p,u){return t(),a("div")}const f=e(o,[["render",n]]);export{i as __pageData,f as default};

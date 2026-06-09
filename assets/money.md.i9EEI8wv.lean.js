@@ -1,1 +1,0 @@
-import{_ as i,H as a,f as e,i as t}from"./chunks/framework.BGnj2dTC.js";const d=JSON.parse('{"title":"","description":"","frontmatter":{},"headers":[],"relativePath":"money.md","filePath":"money.md"}'),r={name:"money.md"};function o(u,l,n,p,h,s){return a(),e("div",null,[...l[0]||(l[0]=[t("",21)])])}const c=i(r,[["render",o]]);export{d as __pageData,c as default};
